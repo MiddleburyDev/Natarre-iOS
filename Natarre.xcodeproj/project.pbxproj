@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96E185A51595F9AA00CFB0BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A41595F9AA00CFB0BF /* UIKit.framework */; };
+		96E185A71595F9AA00CFB0BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A61595F9AA00CFB0BF /* Foundation.framework */; };
+		96E185A91595F9AA00CFB0BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A81595F9AA00CFB0BF /* CoreGraphics.framework */; };
+		96E185AF1595F9AA00CFB0BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96E185AD1595F9AA00CFB0BF /* InfoPlist.strings */; };
+		96E185B11595F9AA00CFB0BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E185B01595F9AA00CFB0BF /* main.m */; };
+		96E185B51595F9AA00CFB0BF /* TNBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E185B41595F9AA00CFB0BF /* TNBAppDelegate.m */; };
+		96E185B81595F9AA00CFB0BF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E185B61595F9AA00CFB0BF /* MainStoryboard.storyboard */; };
+		96E185BB1595F9AA00CFB0BF /* TNBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E185BA1595F9AA00CFB0BF /* TNBViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		96E185A01595F9AA00CFB0BF /* Natarre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natarre.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E185A41595F9AA00CFB0BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		96E185A61595F9AA00CFB0BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		96E185A81595F9AA00CFB0BF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		96E185AC1595F9AA00CFB0BF /* Natarre-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Natarre-Info.plist"; sourceTree = "<group>"; };
+		96E185AE1595F9AA00CFB0BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		96E185B01595F9AA00CFB0BF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		96E185B21595F9AA00CFB0BF /* Natarre-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Natarre-Prefix.pch"; sourceTree = "<group>"; };
+		96E185B31595F9AA00CFB0BF /* TNBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNBAppDelegate.h; sourceTree = "<group>"; };
+		96E185B41595F9AA00CFB0BF /* TNBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNBAppDelegate.m; sourceTree = "<group>"; };
+		96E185B71595F9AA00CFB0BF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		96E185B91595F9AA00CFB0BF /* TNBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNBViewController.h; sourceTree = "<group>"; };
+		96E185BA1595F9AA00CFB0BF /* TNBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNBViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96E1859D1595F9AA00CFB0BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E185A51595F9AA00CFB0BF /* UIKit.framework in Frameworks */,
+				96E185A71595F9AA00CFB0BF /* Foundation.framework in Frameworks */,
+				96E185A91595F9AA00CFB0BF /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96E185951595F9AA00CFB0BF = {
+			isa = PBXGroup;
+			children = (
+				96E185AA1595F9AA00CFB0BF /* Natarre */,
+				96E185A31595F9AA00CFB0BF /* Frameworks */,
+				96E185A11595F9AA00CFB0BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96E185A11595F9AA00CFB0BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96E185A01595F9AA00CFB0BF /* Natarre.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96E185A31595F9AA00CFB0BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96E185A41595F9AA00CFB0BF /* UIKit.framework */,
+				96E185A61595F9AA00CFB0BF /* Foundation.framework */,
+				96E185A81595F9AA00CFB0BF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96E185AA1595F9AA00CFB0BF /* Natarre */ = {
+			isa = PBXGroup;
+			children = (
+				96E185B31595F9AA00CFB0BF /* TNBAppDelegate.h */,
+				96E185B41595F9AA00CFB0BF /* TNBAppDelegate.m */,
+				96E185B61595F9AA00CFB0BF /* MainStoryboard.storyboard */,
+				96E185B91595F9AA00CFB0BF /* TNBViewController.h */,
+				96E185BA1595F9AA00CFB0BF /* TNBViewController.m */,
+				96E185AB1595F9AA00CFB0BF /* Supporting Files */,
+			);
+			path = Natarre;
+			sourceTree = "<group>";
+		};
+		96E185AB1595F9AA00CFB0BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96E185AC1595F9AA00CFB0BF /* Natarre-Info.plist */,
+				96E185AD1595F9AA00CFB0BF /* InfoPlist.strings */,
+				96E185B01595F9AA00CFB0BF /* main.m */,
+				96E185B21595F9AA00CFB0BF /* Natarre-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96E1859F1595F9AA00CFB0BF /* Natarre */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96E185BE1595F9AA00CFB0BF /* Build configuration list for PBXNativeTarget "Natarre" */;
+			buildPhases = (
+				96E1859C1595F9AA00CFB0BF /* Sources */,
+				96E1859D1595F9AA00CFB0BF /* Frameworks */,
+				96E1859E1595F9AA00CFB0BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Natarre;
+			productName = Natarre;
+			productReference = 96E185A01595F9AA00CFB0BF /* Natarre.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96E185971595F9AA00CFB0BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TNB;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Strabo;
+			};
+			buildConfigurationList = 96E1859A1595F9AA00CFB0BF /* Build configuration list for PBXProject "Natarre" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 96E185951595F9AA00CFB0BF;
+			productRefGroup = 96E185A11595F9AA00CFB0BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96E1859F1595F9AA00CFB0BF /* Natarre */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96E1859E1595F9AA00CFB0BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E185AF1595F9AA00CFB0BF /* InfoPlist.strings in Resources */,
+				96E185B81595F9AA00CFB0BF /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96E1859C1595F9AA00CFB0BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E185B11595F9AA00CFB0BF /* main.m in Sources */,
+				96E185B51595F9AA00CFB0BF /* TNBAppDelegate.m in Sources */,
+				96E185BB1595F9AA00CFB0BF /* TNBViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		96E185AD1595F9AA00CFB0BF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96E185AE1595F9AA00CFB0BF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		96E185B61595F9AA00CFB0BF /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96E185B71595F9AA00CFB0BF /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96E185BC1595F9AA00CFB0BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		96E185BD1595F9AA00CFB0BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96E185BF1595F9AA00CFB0BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Natarre/Natarre-Prefix.pch";
+				INFOPLIST_FILE = "Natarre/Natarre-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		96E185C01595F9AA00CFB0BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Natarre/Natarre-Prefix.pch";
+				INFOPLIST_FILE = "Natarre/Natarre-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96E1859A1595F9AA00CFB0BF /* Build configuration list for PBXProject "Natarre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96E185BC1595F9AA00CFB0BF /* Debug */,
+				96E185BD1595F9AA00CFB0BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96E185BE1595F9AA00CFB0BF /* Build configuration list for PBXNativeTarget "Natarre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96E185BF1595F9AA00CFB0BF /* Debug */,
+				96E185C01595F9AA00CFB0BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96E185971595F9AA00CFB0BF /* Project object */;
+}
