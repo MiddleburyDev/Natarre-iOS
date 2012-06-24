@@ -39,6 +39,11 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     self.theTextView.text = self.story.content;
+    
+    // Resize to fit the content
+    CGRect frame = theTextView.frame;
+    frame.size.height = theTextView.contentSize.height;
+    theTextView.frame = frame;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

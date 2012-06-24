@@ -130,7 +130,7 @@
         story.title = [dic objectForKey:@"title"];
         story.dateCreated = [NSDate dateWithTimeIntervalSince1970:(int)[dic objectForKey:@"date_created"]];
         story.content = [dic objectForKey:@"content"];
-        story.audioURL = ([dic objectForKey:@"audio_file_url"]) ? nil : [dic objectForKey:@"audio_file_url"];
+        story.audioURL = ([dic objectForKey:@"audio_file_url"] == [NSNull null]) ? nil : [dic objectForKey:@"audio_file_url"];
         [objects addObject:story];
     }
     

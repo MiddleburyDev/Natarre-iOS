@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		965CBC0D15974A48001B1EAA /* backNav.png in Resources */ = {isa = PBXBuildFile; fileRef = 965CBC0C15974A48001B1EAA /* backNav.png */; };
 		965CBC1115974BE6001B1EAA /* TNBReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965CBC1015974BE6001B1EAA /* TNBReaderViewController.m */; };
+		965CBC1815975B9E001B1EAA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 965CBC1615975B9E001B1EAA /* Default.png */; };
+		965CBC1915975B9E001B1EAA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 965CBC1715975B9E001B1EAA /* Default@2x.png */; };
+		965CBC1B15975CD6001B1EAA /* mainLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 965CBC1A15975CD6001B1EAA /* mainLogo.png */; };
+		965CBC1E15975EB7001B1EAA /* TNBTopStoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965CBC1D15975EB7001B1EAA /* TNBTopStoriesTableViewController.m */; };
 		96CCB5D91596787100CEC1BD /* TNBLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5D81596787100CEC1BD /* TNBLoginManager.m */; };
 		96CCB5DD1596791D00CEC1BD /* TNBCurrentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5DC1596791D00CEC1BD /* TNBCurrentUser.m */; };
 		96CCB5E115967BC700CEC1BD /* TNBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5E015967BC700CEC1BD /* TNBLoginViewController.m */; };
@@ -45,7 +49,6 @@
 		96DE22101596F89F002E914C /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 96DE22091596F89E002E914C /* iTunesArtwork */; };
 		96DE22141596FBD8002E914C /* TNBStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE22131596FBD8002E914C /* TNBStoryCell.m */; };
 		96DE22161596FBF0002E914C /* TNBStoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DE22151596FBF0002E914C /* TNBStoryCell.xib */; };
-		96DE221A1597032F002E914C /* TNBSampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE22191597032F002E914C /* TNBSampleTableViewController.m */; };
 		96DE222015971244002E914C /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DE221F15971244002E914C /* arrow.png */; };
 		96DE22271597186C002E914C /* TNBStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE22261597186C002E914C /* TNBStory.m */; };
 		96DE222A15974084002E914C /* greenDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DE222815974083002E914C /* greenDot.png */; };
@@ -67,6 +70,11 @@
 		965CBC0C15974A48001B1EAA /* backNav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backNav.png; sourceTree = "<group>"; };
 		965CBC0F15974BE5001B1EAA /* TNBReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBReaderViewController.h; sourceTree = "<group>"; };
 		965CBC1015974BE6001B1EAA /* TNBReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBReaderViewController.m; sourceTree = "<group>"; };
+		965CBC1615975B9E001B1EAA /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		965CBC1715975B9E001B1EAA /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		965CBC1A15975CD6001B1EAA /* mainLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainLogo.png; sourceTree = "<group>"; };
+		965CBC1C15975EB7001B1EAA /* TNBTopStoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBTopStoriesTableViewController.h; sourceTree = "<group>"; };
+		965CBC1D15975EB7001B1EAA /* TNBTopStoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBTopStoriesTableViewController.m; sourceTree = "<group>"; };
 		96CCB5D71596787100CEC1BD /* TNBLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBLoginManager.h; sourceTree = "<group>"; };
 		96CCB5D81596787100CEC1BD /* TNBLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBLoginManager.m; sourceTree = "<group>"; };
 		96CCB5DB1596791C00CEC1BD /* TNBCurrentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBCurrentUser.h; sourceTree = "<group>"; };
@@ -117,8 +125,6 @@
 		96DE22121596FBD8002E914C /* TNBStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBStoryCell.h; sourceTree = "<group>"; };
 		96DE22131596FBD8002E914C /* TNBStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBStoryCell.m; sourceTree = "<group>"; };
 		96DE22151596FBF0002E914C /* TNBStoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TNBStoryCell.xib; sourceTree = "<group>"; };
-		96DE22181597032F002E914C /* TNBSampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBSampleTableViewController.h; sourceTree = "<group>"; };
-		96DE22191597032F002E914C /* TNBSampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBSampleTableViewController.m; sourceTree = "<group>"; };
 		96DE221F15971244002E914C /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		96DE22251597186C002E914C /* TNBStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBStory.h; sourceTree = "<group>"; };
 		96DE22261597186C002E914C /* TNBStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBStory.m; sourceTree = "<group>"; };
@@ -254,6 +260,7 @@
 		96DE21EC1596ECF2002E914C /* Nav Bar Images */ = {
 			isa = PBXGroup;
 			children = (
+				965CBC1A15975CD6001B1EAA /* mainLogo.png */,
 				96DE21E41596ECEC002E914C /* navBarBackground.png */,
 				96DE21E51596ECEC002E914C /* navBarBackground@2x.png */,
 				96DE21E61596ECEC002E914C /* tabBarBackground.png */,
@@ -281,8 +288,8 @@
 			children = (
 				96DE21FE1596F844002E914C /* TNBThisWeekViewController.h */,
 				96DE21FF1596F844002E914C /* TNBThisWeekViewController.m */,
-				96DE22181597032F002E914C /* TNBSampleTableViewController.h */,
-				96DE22191597032F002E914C /* TNBSampleTableViewController.m */,
+				965CBC1C15975EB7001B1EAA /* TNBTopStoriesTableViewController.h */,
+				965CBC1D15975EB7001B1EAA /* TNBTopStoriesTableViewController.m */,
 			);
 			name = "First Subtabs";
 			sourceTree = "<group>";
@@ -290,6 +297,8 @@
 		96DE22111596F8AD002E914C /* Icon Artwork */ = {
 			isa = PBXGroup;
 			children = (
+				965CBC1615975B9E001B1EAA /* Default.png */,
+				965CBC1715975B9E001B1EAA /* Default@2x.png */,
 				96DE22031596F89E002E914C /* Icon-72.png */,
 				96DE22041596F89E002E914C /* Icon-Small-50.png */,
 				96DE22051596F89E002E914C /* Icon-Small.png */,
@@ -460,6 +469,9 @@
 				96DE222F159742D8002E914C /* prefsNav.png in Resources */,
 				96DE2230159742D8002E914C /* submitNav.png in Resources */,
 				965CBC0D15974A48001B1EAA /* backNav.png in Resources */,
+				965CBC1815975B9E001B1EAA /* Default.png in Resources */,
+				965CBC1915975B9E001B1EAA /* Default@2x.png in Resources */,
+				965CBC1B15975CD6001B1EAA /* mainLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,10 +497,10 @@
 				96DE21FD1596F7DE002E914C /* TNBStoriesManager.m in Sources */,
 				96DE22001596F844002E914C /* TNBThisWeekViewController.m in Sources */,
 				96DE22141596FBD8002E914C /* TNBStoryCell.m in Sources */,
-				96DE221A1597032F002E914C /* TNBSampleTableViewController.m in Sources */,
 				96DE22271597186C002E914C /* TNBStory.m in Sources */,
 				96DE2237159744BC002E914C /* TNBPrefsViewController.m in Sources */,
 				965CBC1115974BE6001B1EAA /* TNBReaderViewController.m in Sources */,
+				965CBC1E15975EB7001B1EAA /* TNBTopStoriesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,7 @@
 
 #define kTNBThisWeekPromptURL kTNBBaseURL @"/mobile/api/prompts/thisweek"
 #define kTNBStoriesForPromptURL kTNBBaseURL @"/mobile/api/stories/forprompt"
+#define kTNBPopularStoriesURL kTNBBaseURL @"/mobile/api/stories/popular"
 
 // NSUserDefaults Login Keys
 #define kTNBNSUserDefaultsTokenKey @"kTNBNSUserDefaultsTokenKey"

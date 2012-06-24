@@ -18,6 +18,8 @@
     // Override point for customization after application launch.
     self.loginManager = [[TNBLoginManager alloc] init];
     
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent animated:YES];
+    
     // TESTING ONLY
     //[self.loginManager logCurrentUserOut];
     

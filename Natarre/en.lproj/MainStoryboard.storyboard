@@ -46,11 +46,11 @@
             </objects>
             <point key="canvasLocation" x="2164" y="-913"/>
         </scene>
-        <!--Pull To Refresh Table View Controller - Root View Controller-->
+        <!--Top Stories Table View Controller - Root View Controller-->
         <scene sceneID="5nb-zw-TNc">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WyH-rL-Qp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="5Ve-56-suG" customClass="TNBPullToRefreshTableViewController" sceneMemberID="viewController">
+                <tableViewController id="5Ve-56-suG" customClass="TNBTopStoriesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="61" sectionHeaderHeight="22" sectionFooterHeight="22" id="JPU-sF-Swl">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,8 +240,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gKg-8d-6Md" appends="YES" id="uRC-ee-DJm"/>
+                                </connections>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -253,6 +257,11 @@
                         <outlet property="theTextView" destination="PNi-ke-gZp" id="nPP-KX-jG3"/>
                     </connections>
                 </viewController>
+                <swipeGestureRecognizer direction="right" id="gKg-8d-6Md">
+                    <connections>
+                        <action selector="swipeRightDetected:" destination="6ht-8m-Xgn" id="3lA-I3-kXk"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1386" y="-232"/>
         </scene>
@@ -384,6 +393,10 @@
                                     <segue destination="5Fs-ra-AYd" kind="modal" id="Njn-Ww-pGh"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mainLogo.png" id="WdK-6E-ww7">
+                                <rect key="frame" x="108" y="3" width="105" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -593,18 +606,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="allStories@2x.png" width="128" height="114"/>
+        <image name="allStories@2x.png" width="128" height="102"/>
         <image name="allStoriesActive.png" width="128" height="102"/>
-        <image name="myFavorites@2x.png" width="128" height="114"/>
+        <image name="mainLogo.png" width="16" height="16"/>
+        <image name="myFavorites@2x.png" width="128" height="102"/>
         <image name="myFavoritesActive.png" width="128" height="102"/>
         <image name="prefsNav.png" width="102" height="74"/>
-        <image name="readingList@2x.png" width="128" height="114"/>
+        <image name="readingList@2x.png" width="128" height="102"/>
         <image name="readingListActive.png" width="128" height="102"/>
         <image name="submitNav.png" width="128" height="74"/>
         <image name="thisWeek.png" width="16" height="16"/>
-        <image name="thisWeek@2x.png" width="128" height="114"/>
+        <image name="thisWeek@2x.png" width="128" height="102"/>
         <image name="thisWeekActive.png" width="128" height="102"/>
-        <image name="topStories@2x.png" width="128" height="114"/>
+        <image name="topStories@2x.png" width="128" height="102"/>
         <image name="topStoriesActive.png" width="128" height="102"/>
     </resources>
     <classes>
@@ -678,6 +692,9 @@
         </class>
         <class className="TNBThisWeekViewController" superclassName="TNBPullToRefreshTableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBThisWeekViewController.h"/>
+        </class>
+        <class className="TNBTopStoriesTableViewController" superclassName="TNBPullToRefreshTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBTopStoriesTableViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
