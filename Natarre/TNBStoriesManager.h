@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TNBAppDelegate.h"
+
+#import "NSStringMods.h"
 
 #import "TNBStory.h"
 
@@ -27,7 +30,11 @@
 
 @property(nonatomic, strong)id delegate;
 
+// Returns a prompt ID
+-(NSInteger)thisWeeksPrompt;
+
 -(void)generateRequestWithKeyPairs:(NSDictionary *)keyPairs sendToURL:(NSURL *)apiURL;
+
 -(void)sendGeneratedRequest;
 
 @end

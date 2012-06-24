@@ -10,6 +10,6 @@
 
 @implementation TNBStory
 
-@synthesize storyID, authorID, authorName, dateCreated, text;
+@synthesize storyID, authorID, authorName, dateCreated, title, text, audioURL;
 
 @end

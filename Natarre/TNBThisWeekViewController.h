@@ -19,4 +19,6 @@
 
 -(void)refresh;
 
+-(TNBStoryCell *)configureCell:(TNBStoryCell *)cell withArrayIndex:(NSInteger)index;
+
 @end

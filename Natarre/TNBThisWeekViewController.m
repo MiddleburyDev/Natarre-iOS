@@ -35,6 +35,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    //storyList = [NSArray
 }
 
 - (void)viewDidUnload
@@ -51,15 +53,19 @@
 -(void)refresh {
     NSLog(@"Refresh was called.");
     TNBStoriesManager * storiesManager = [[TNBStoriesManager alloc] init];
+    storiesManager.delegate = self;
     
     TNBCurrentUser * user = [[TNBLoginManager defaultManager] currentUser];
     
-    NSArray * objects = [NSArray arrayWithObjects:user.userID, user.token, nil];
-    NSArray * keys = [NSArray arrayWithObjects:@"user_id", @"token", nil];
+    NSArray * objects = [NSArray arrayWithObjects:user.email, user.token, [storiesManager thisWeeksPrompt], nil];
+    NSArray * keys = [NSArray arrayWithObjects:@"email", @"token", @"prompt_ID", nil];
     
     NSDictionary * keypairs = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
-    [storiesManager generateRequestWithKeyPairs:keypairs sendToURL:[NSURL URLWithString:kTNBThisWeekPromptURL]];
+    [storiesManager generateRequestWithKeyPairs:keypairs sendToURL:[NSURL URLWithString:kTNBStoriesForPromptURL]];
     [storiesManager sendGeneratedRequest];
+    
+    // KEEP ---------------------------------
+    [self stopLoading];
 }
 
 #pragma mark - Table view data source
@@ -74,7 +80,19 @@
 {
 #warning Incomplete implementation
     // Return the number of rows in the section.
+    NSLog(@"number of cells to show: %d", storyList.count);
     return storyList.count;
+}
+
+-(TNBStoryCell *)configureCell:(TNBStoryCell *)cell withArrayIndex:(NSInteger)index {
+    
+    NSLog(@"Configuring Cell!");
+
+    TNBStory * story = [storyList objectAtIndex:index];
+    
+    cell.titleLabel.text = story.text;
+    
+    return cell;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -85,11 +103,10 @@
         [[NSBundle mainBundle] loadNibNamed:@"TNBStoryCell" owner:self options:nil];
         cell = self.tblCell;
     }
-    NSLog(@"Configuring the cell.");
+    NSLog(@"Calling to Configure the cell.");
     // Configure the cell...
-    cell.titleLabel.text = @"The title";
-    
-    return cell;
+
+    return [self configureCell:cell withArrayIndex:[indexPath indexAtPosition:1]];
 }
 
 #pragma mark - Table view delegate
@@ -110,6 +127,7 @@
 @implementation TNBThisWeekViewController (TNBStoriesManagerDelegate)
 
 -(void)successfullyDownloadedStories:(NSArray *)stories {
+    NSLog(@"Reloading Data: %@", stories);
     storyList = stories;
     [self.tableView reloadData];
 }
