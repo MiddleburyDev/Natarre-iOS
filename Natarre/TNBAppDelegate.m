@@ -19,7 +19,7 @@
     self.loginManager = [[TNBLoginManager alloc] init];
     
     // TESTING ONLY
-    [self.loginManager logCurrentUserOut];
+    //[self.loginManager logCurrentUserOut];
     
     return YES;
 }
