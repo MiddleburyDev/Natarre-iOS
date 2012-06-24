@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TNBStoryCell.h"
 
 @interface TNBPullToRefreshTableViewController : UITableViewController {
     UIView * headerView;
@@ -18,7 +19,11 @@
     NSString * pullText;
     NSString * releaseText;
     NSString * refreshingText;
+    
+    TNBStoryCell * tblCell;
 }
+
+@property(nonatomic, strong)IBOutlet TNBStoryCell * tblCell;
 
 @property(nonatomic, strong)UIView * headerView;
 @property(nonatomic, strong)UILabel * headerLabel;

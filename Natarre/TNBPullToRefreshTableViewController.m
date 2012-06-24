@@ -17,6 +17,7 @@
 
 @implementation TNBPullToRefreshTableViewController
 
+@synthesize tblCell;
 @synthesize headerView, headerLabel, arrow, spinnerOfDeath, pullText, releaseText, refreshingText;
 
 #pragma mark - Init Methods

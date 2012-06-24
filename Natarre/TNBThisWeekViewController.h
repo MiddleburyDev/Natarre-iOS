@@ -7,7 +7,13 @@
 //
 
 #import "TNBPullToRefreshTableViewController.h"
+#import "TNBAppDelegate.h"
 
-@interface TNBThisWeekViewController : TNBPullToRefreshTableViewController
+// Supporting Files
+#import "TNBStoryCell.h"
+
+@interface TNBThisWeekViewController : TNBPullToRefreshTableViewController {
+    
+}
 
 @end

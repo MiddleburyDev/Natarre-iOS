@@ -42,6 +42,9 @@
 		96DE220E1596F89F002E914C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DE22071596F89E002E914C /* Icon.png */; };
 		96DE220F1596F89F002E914C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DE22081596F89E002E914C /* Icon@2x.png */; };
 		96DE22101596F89F002E914C /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 96DE22091596F89E002E914C /* iTunesArtwork */; };
+		96DE22141596FBD8002E914C /* TNBStoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE22131596FBD8002E914C /* TNBStoryCell.m */; };
+		96DE22161596FBF0002E914C /* TNBStoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DE22151596FBF0002E914C /* TNBStoryCell.xib */; };
+		96DE221A1597032F002E914C /* TNBSampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE22191597032F002E914C /* TNBSampleTableViewController.m */; };
 		96E185A51595F9AA00CFB0BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A41595F9AA00CFB0BF /* UIKit.framework */; };
 		96E185A71595F9AA00CFB0BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A61595F9AA00CFB0BF /* Foundation.framework */; };
 		96E185A91595F9AA00CFB0BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A81595F9AA00CFB0BF /* CoreGraphics.framework */; };
@@ -101,6 +104,11 @@
 		96DE22071596F89E002E914C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		96DE22081596F89E002E914C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		96DE22091596F89E002E914C /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		96DE22121596FBD8002E914C /* TNBStoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBStoryCell.h; sourceTree = "<group>"; };
+		96DE22131596FBD8002E914C /* TNBStoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBStoryCell.m; sourceTree = "<group>"; };
+		96DE22151596FBF0002E914C /* TNBStoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TNBStoryCell.xib; sourceTree = "<group>"; };
+		96DE22181597032F002E914C /* TNBSampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBSampleTableViewController.h; sourceTree = "<group>"; };
+		96DE22191597032F002E914C /* TNBSampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBSampleTableViewController.m; sourceTree = "<group>"; };
 		96E185A01595F9AA00CFB0BF /* Natarre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natarre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E185A41595F9AA00CFB0BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96E185A61595F9AA00CFB0BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -158,6 +166,7 @@
 				96DE21DD1596E0EB002E914C /* TNBHackaTabController.h */,
 				96DE21DE1596E0EB002E914C /* TNBHackaTabController.m */,
 				96DE22011596F848002E914C /* Table View Controllers */,
+				96DE22171596FBF7002E914C /* Table View Components */,
 				96CCB5E315967BD900CEC1BD /* Login VC's */,
 			);
 			name = "View Controllers";
@@ -243,6 +252,8 @@
 			children = (
 				96DE21FE1596F844002E914C /* TNBThisWeekViewController.h */,
 				96DE21FF1596F844002E914C /* TNBThisWeekViewController.m */,
+				96DE22181597032F002E914C /* TNBSampleTableViewController.h */,
+				96DE22191597032F002E914C /* TNBSampleTableViewController.m */,
 			);
 			name = "First Subtabs";
 			sourceTree = "<group>";
@@ -259,6 +270,16 @@
 				96DE22091596F89E002E914C /* iTunesArtwork */,
 			);
 			name = "Icon Artwork";
+			sourceTree = "<group>";
+		};
+		96DE22171596FBF7002E914C /* Table View Components */ = {
+			isa = PBXGroup;
+			children = (
+				96DE22121596FBD8002E914C /* TNBStoryCell.h */,
+				96DE22131596FBD8002E914C /* TNBStoryCell.m */,
+				96DE22151596FBF0002E914C /* TNBStoryCell.xib */,
+			);
+			name = "Table View Components";
 			sourceTree = "<group>";
 		};
 		96E185951595F9AA00CFB0BF = {
@@ -395,6 +416,7 @@
 				96DE220E1596F89F002E914C /* Icon.png in Resources */,
 				96DE220F1596F89F002E914C /* Icon@2x.png in Resources */,
 				96DE22101596F89F002E914C /* iTunesArtwork in Resources */,
+				96DE22161596FBF0002E914C /* TNBStoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +441,8 @@
 				96DE21DF1596E0EB002E914C /* TNBHackaTabController.m in Sources */,
 				96DE21FD1596F7DE002E914C /* TNBStoriesManager.m in Sources */,
 				96DE22001596F844002E914C /* TNBThisWeekViewController.m in Sources */,
+				96DE22141596FBD8002E914C /* TNBStoryCell.m in Sources */,
+				96DE221A1597032F002E914C /* TNBSampleTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
