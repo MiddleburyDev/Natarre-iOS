@@ -8,6 +8,12 @@
 
 #import "TNBThisWeekViewController.h"
 
+@interface TNBThisWeekViewController (TNBStoriesManagerDelegate) <TNBStoriesManagerDelegate>
+
+-(void)successfullyDownloadedStories:(NSArray *)stories;
+
+@end
+
 @interface TNBThisWeekViewController (InternalMethods)
 -(TNBStoryCell *)configureCell:(TNBStoryCell *)cell;
 @end
@@ -22,6 +28,8 @@
     }
     return self;
 }
+
+#pragma mark - View Lifecycle
 
 - (void)viewDidLoad
 {
@@ -40,20 +48,33 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(void)refresh {
+    NSLog(@"Refresh was called.");
+    TNBStoriesManager * storiesManager = [[TNBStoriesManager alloc] init];
+    
+    TNBCurrentUser * user = [[TNBLoginManager defaultManager] currentUser];
+    
+    NSArray * objects = [NSArray arrayWithObjects:user.userID, user.token, nil];
+    NSArray * keys = [NSArray arrayWithObjects:@"user_id", @"token", nil];
+    
+    NSDictionary * keypairs = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+    [storiesManager generateRequestWithKeyPairs:keypairs sendToURL:[NSURL URLWithString:kTNBThisWeekPromptURL]];
+    [storiesManager sendGeneratedRequest];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+#warning Incomplete implementation
     // Return the number of rows in the section.
-    return 1;
+    return storyList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -82,6 +103,15 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+@end
+
+@implementation TNBThisWeekViewController (TNBStoriesManagerDelegate)
+
+-(void)successfullyDownloadedStories:(NSArray *)stories {
+    storyList = stories;
+    [self.tableView reloadData];
 }
 
 @end

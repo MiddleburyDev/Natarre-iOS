@@ -10,10 +10,13 @@
 #import "TNBAppDelegate.h"
 
 // Supporting Files
+#import "TNBStoriesManager.h"
 #import "TNBStoryCell.h"
 
 @interface TNBThisWeekViewController : TNBPullToRefreshTableViewController {
-    
+    NSArray * storyList;
 }
+
+-(void)refresh;
 
 @end

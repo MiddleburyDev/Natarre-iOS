@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 Nate Beatty. All rights reserved.
 //
 
+#import "Constants.h"
+
 #import <UIKit/UIKit.h>
 #import "TNBLoginManager.h"
 

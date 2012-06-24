@@ -18,7 +18,7 @@
 #define kTNBLoginURL kTNBBaseURL @"/mobile/api/login/natarre"
 #define kTNBRegisterURL kTNBBaseURL @"/mobile/api/register/natarre"
 
-#define kTNBThisWeekPromptURL kTNBBaseURL @"/mobile/api/prompts/thisweek"
+#define kTNBThisWeekPromptURL kTNBBaseURL @"/mobile/api/stories/all"
 
 // NSUserDefaults Login Keys
 #define kTNBNSUserDefaultsTokenKey @"kTNBNSUserDefaultsTokenKey"
