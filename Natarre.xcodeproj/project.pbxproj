@@ -16,6 +16,7 @@
 		96CCB5F71596AF4200CEC1BD /* TNBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5F61596AF4200CEC1BD /* TNBRegisterViewController.m */; };
 		96CCB5F91596C5DC00CEC1BD /* tab_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CCB5F81596C5DC00CEC1BD /* tab_bar@2x.png */; };
 		96DE21C11596CA1D002E914C /* tab_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DE21C01596CA1D002E914C /* tab_bar.png */; };
+		96DE21C51596CD98002E914C /* TNBPullToRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE21C41596CD98002E914C /* TNBPullToRefreshTableViewController.m */; };
 		96E185A51595F9AA00CFB0BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A41595F9AA00CFB0BF /* UIKit.framework */; };
 		96E185A71595F9AA00CFB0BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A61595F9AA00CFB0BF /* Foundation.framework */; };
 		96E185A91595F9AA00CFB0BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A81595F9AA00CFB0BF /* CoreGraphics.framework */; };
@@ -45,6 +46,8 @@
 		96CCB5F61596AF4200CEC1BD /* TNBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBRegisterViewController.m; sourceTree = "<group>"; };
 		96CCB5F81596C5DC00CEC1BD /* tab_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bar@2x.png"; sourceTree = "<group>"; };
 		96DE21C01596CA1D002E914C /* tab_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_bar.png; sourceTree = "<group>"; };
+		96DE21C31596CD98002E914C /* TNBPullToRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBPullToRefreshTableViewController.h; sourceTree = "<group>"; };
+		96DE21C41596CD98002E914C /* TNBPullToRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBPullToRefreshTableViewController.m; sourceTree = "<group>"; };
 		96E185A01595F9AA00CFB0BF /* Natarre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natarre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E185A41595F9AA00CFB0BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96E185A61595F9AA00CFB0BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -97,6 +100,8 @@
 			children = (
 				96E185B91595F9AA00CFB0BF /* TNBRootViewController.h */,
 				96E185BA1595F9AA00CFB0BF /* TNBRootViewController.m */,
+				96DE21C31596CD98002E914C /* TNBPullToRefreshTableViewController.h */,
+				96DE21C41596CD98002E914C /* TNBPullToRefreshTableViewController.m */,
 				96CCB5E315967BD900CEC1BD /* Login VC's */,
 			);
 			name = "View Controllers";
@@ -267,6 +272,7 @@
 				96CCB5EF15968F8000CEC1BD /* NSString+MD5.m in Sources */,
 				96CCB5F015968F8000CEC1BD /* NSString+uploadHash.m in Sources */,
 				96CCB5F71596AF4200CEC1BD /* TNBRegisterViewController.m in Sources */,
+				96DE21C51596CD98002E914C /* TNBPullToRefreshTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

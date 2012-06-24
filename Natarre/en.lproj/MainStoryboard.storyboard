@@ -140,11 +140,11 @@
             </objects>
             <point key="canvasLocation" x="2640" y="760"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Pull To Refresh Table View Controller - Root View Controller-->
         <scene sceneID="hI2-7v-6aG">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lve-J9-Y94" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="zeE-Gw-ipv" sceneMemberID="viewController">
+                <tableViewController id="zeE-Gw-ipv" customClass="TNBPullToRefreshTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fJD-3s-fcR">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -395,6 +395,9 @@
                 <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
             </relationships>
+        </class>
+        <class className="TNBPullToRefreshTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBPullToRefreshTableViewController.h"/>
         </class>
         <class className="TNBRegisterViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBRegisterViewController.h"/>
