@@ -15,8 +15,8 @@
 
 // Server URLs
 #define kTNBBaseURL @"http://willpotter.local:3000/"
-#define kTNBLoginURL kTNBBaseURL @"/mobile/api/login"
-#define kTNBRegisterURL kSTRBaseURL @"/mobile/api/register"
+#define kTNBLoginURL kTNBBaseURL @"/mobile/api/login/natarre"
+#define kTNBRegisterURL kTNBBaseURL @"/mobile/api/register"
 
 // NSUserDefaults Login Keys
 #define kTNBNSUserDefaultsTokenKey @"kTNBNSUserDefaultsTokenKey"

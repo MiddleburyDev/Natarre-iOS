@@ -18,6 +18,7 @@
 
 // Login Handling
 -(void)saveLoginEmail:(NSString *)email userID:(NSNumber *)userID token:(NSString *)token;
+-(void)refreshLogin;
 
 // Response Validation
 -(BOOL)validateResponseToken:(NSString *)token forUserID:(NSNumber *)userID;
@@ -29,6 +30,15 @@
 
 @synthesize delegate;
 @synthesize currentUser;
+
+-(id)init {
+    if (self) {
+        
+        [self refreshLogin];
+        
+    }
+    return self;
+}
 
 +(TNBLoginManager *)defaultManager {
     return (TNBLoginManager *)[(TNBAppDelegate *)[[UIApplication sharedApplication] delegate] loginManager];
@@ -86,7 +96,48 @@
 }
 
 -(void)registerNewUserWithName:(NSString *)name email:(NSString *)email password:(NSString *)password {
+    NSLog(@"LoginManager: Attempting to register a user.");
     
+    // Send a request to the server
+    // Request login response from the server
+    NSDictionary * keyValuePairs = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:name, email, password.MD5, email.uploadHash, nil] 
+                                                               forKeys:[NSArray arrayWithObjects:@"name", @"email", @"password", @"token", nil]];
+    NSData * responseData = [self sendSynchronousPostRequestTo:[NSURL URLWithString:kTNBRegisterURL] 
+                                             withKeyValuePairs:keyValuePairs];
+    NSLog(@"LoginManager: Returned Data: %@", [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
+    
+    // Check for errors
+    NSError * error;
+    NSDictionary * responseDictionary = [self validateResponseData:responseData forError:&error];
+    // Notify the delegate of an error if one exists
+    if (!responseDictionary || error) {
+        if ([self.delegate respondsToSelector:@selector(userAccountCreationDidFailWithError:)]) {
+            NSLog(@"LoginManager: Notifying delegate userAccountCreationDidFailWithError: %@.", error.localizedDescription);
+            [delegate userAccountCreationDidFailWithError:error];
+        }
+        return;
+    }
+    
+    BOOL isValidJSON = [self validateJSON:responseDictionary forServerError:&error];
+    // Notify the delegate of an error if one exists
+    if (!isValidJSON || error) {
+        if ([self.delegate respondsToSelector:@selector(userAccountCreationDidFailWithError:)]) {
+            NSLog(@"LoginManager: Notifying delegate userAccountCreationDidFailWithError: %@.", error.localizedDescription);
+            [delegate userAccountCreationDidFailWithError:error];
+        }
+        return;
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(userAccountCreatedSuccessfully)]) {
+        NSLog(@"LoginManager: Notifying delegate userAccountCreatedSuccessfully.");
+        [delegate userAccountCreatedSuccessfully];
+    }
+    
+    // Handle the response data (if there were no errors)
+    // by logging the user in.
+    [self saveLoginEmail:email 
+                  userID:[responseDictionary objectForKey:@"user_id"] 
+                   token:email.uploadHash];
 }
 
 @end
@@ -206,11 +257,8 @@
     NSLog(@"TNBLoginManager: Validating response dictionary.");
     // Check for an error from the server.
     if ([[responseDictionary objectForKey:@"error_present"] boolValue]) {
-        NSLog(@"TNBLoginManager: !!!ERROR: Server error detected:\n     Error number: %@\n     Error description:%@.", [responseDictionary objectForKey:@"error_number"], [responseDictionary objectForKey:@"error_string"]);
-        *error = [NSError errorWithDomain:@"STR" 
-                                     code:[[responseDictionary objectForKey:@"error_number"] intValue]
-                                 userInfo:[NSDictionary dictionaryWithObject:[responseDictionary objectForKey:@"error_string"] 
-                                                                      forKey:NSLocalizedDescriptionKey]];
+        NSLog(@"TNBLoginManager: !!!ERROR: Server error detected.");
+        *error = [[NSError alloc] init];
         return NO;
     }
     // Crosscheck the server response token

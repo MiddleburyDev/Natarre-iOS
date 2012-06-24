@@ -1,5 +1,5 @@
 //
-//  TNBLoginViewController.h
+//  TNBRegisterViewController.h
 //  Natarre
 //
 //  Created by Thomas Beatty on 6/23/12.
@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "TNBAppDelegate.h"
 
-@interface TNBLoginViewController : UIViewController {
+@interface TNBRegisterViewController : UIViewController {
+    IBOutlet UITextField * nameField;
     IBOutlet UITextField * emailField;
     IBOutlet UITextField * passwordField;
 }
 
--(IBAction)sumbitButtonWasPressed:(id)sender;
+-(IBAction)submitButtonWasPressed:(id)sender;
 
 @end

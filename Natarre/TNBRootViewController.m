@@ -43,8 +43,8 @@
 -(void)verifyLogin {
     if (![[TNBLoginManager defaultManager] userIsLoggedIn]) {
         NSLog(@"TNBRootViewController: Presenting login view controller.");
-        TNBLoginViewController * loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
-        [self presentViewController:loginViewController animated:NO completion:nil];
+        UINavigationController * loginNavController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginNavController"];
+        [self presentViewController:loginNavController animated:NO completion:nil];
     }
 }
 

@@ -13,6 +13,7 @@
 		96CCB5EE15968F8000CEC1BD /* NSString+downloadHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5E915968F8000CEC1BD /* NSString+downloadHash.m */; };
 		96CCB5EF15968F8000CEC1BD /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5EB15968F8000CEC1BD /* NSString+MD5.m */; };
 		96CCB5F015968F8000CEC1BD /* NSString+uploadHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5ED15968F8000CEC1BD /* NSString+uploadHash.m */; };
+		96CCB5F71596AF4200CEC1BD /* TNBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5F61596AF4200CEC1BD /* TNBRegisterViewController.m */; };
 		96E185A51595F9AA00CFB0BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A41595F9AA00CFB0BF /* UIKit.framework */; };
 		96E185A71595F9AA00CFB0BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A61595F9AA00CFB0BF /* Foundation.framework */; };
 		96E185A91595F9AA00CFB0BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A81595F9AA00CFB0BF /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 		96CCB5ED15968F8000CEC1BD /* NSString+uploadHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+uploadHash.m"; sourceTree = "<group>"; };
 		96CCB5F315968FEF00CEC1BD /* NSStringMods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringMods.h; sourceTree = "<group>"; };
 		96CCB5F41596907500CEC1BD /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		96CCB5F51596AF4200CEC1BD /* TNBRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBRegisterViewController.h; sourceTree = "<group>"; };
+		96CCB5F61596AF4200CEC1BD /* TNBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBRegisterViewController.m; sourceTree = "<group>"; };
 		96E185A01595F9AA00CFB0BF /* Natarre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natarre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E185A41595F9AA00CFB0BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96E185A61595F9AA00CFB0BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +103,8 @@
 			children = (
 				96CCB5DF15967BC700CEC1BD /* TNBLoginViewController.h */,
 				96CCB5E015967BC700CEC1BD /* TNBLoginViewController.m */,
+				96CCB5F51596AF4200CEC1BD /* TNBRegisterViewController.h */,
+				96CCB5F61596AF4200CEC1BD /* TNBRegisterViewController.m */,
 			);
 			name = "Login VC's";
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 				96CCB5EE15968F8000CEC1BD /* NSString+downloadHash.m in Sources */,
 				96CCB5EF15968F8000CEC1BD /* NSString+MD5.m in Sources */,
 				96CCB5F015968F8000CEC1BD /* NSString+uploadHash.m in Sources */,
+				96CCB5F71596AF4200CEC1BD /* TNBRegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

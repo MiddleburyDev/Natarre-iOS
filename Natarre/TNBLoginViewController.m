@@ -12,6 +12,15 @@
 
 @end
 
+@interface TNBLoginViewController (TNBLoginManagerDelegate) <TNBLoginManagerDelegate>
+-(void)userWasLoggedInSuccessfully;
+-(void)loginDidFailWithError:(NSError *)error;
+@end
+
+@interface TNBLoginViewController (InternalMethods)
+-(void)loginUser:(NSString *)email withPassword:(NSString *)password;
+@end
+
 @implementation TNBLoginViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,6 +38,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    // Respond to LoginManageDelegate methods
+    [[(TNBAppDelegate *)[[UIApplication sharedApplication] delegate] loginManager] setDelegate:self];
     
 }
 
@@ -47,6 +58,21 @@
 
 -(IBAction)sumbitButtonWasPressed:(id)sender {
     NSLog(@"TNBLoginViewController: Submit button was pressed.");
+    [[(TNBAppDelegate *)[[UIApplication sharedApplication] delegate] loginManager] logUserInWithEmail:emailField.text 
+                                                                                             password:passwordField.text];
+}
+
+@end
+
+@implementation TNBLoginViewController (LoginManagerDelegate)
+
+-(void)userWasLoggedInSuccessfully {
+    NSLog(@"TNBLoginViewController: The login was successful!");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)loginDidFailWithError:(NSError *)error {
+    NSLog(@"TNBLoginViewController: !!!ERROR: Sign-In failed.");
 }
 
 @end
