@@ -8,6 +8,8 @@
 
 #import "Constants.h"
 
+#import "TNBHackaTabController.h"
+
 #import <UIKit/UIKit.h>
 #import "TNBLoginManager.h"
 

@@ -22,6 +22,8 @@
 #define kTNBStoriesForPromptURL kTNBBaseURL @"/mobile/api/stories/forprompt"
 #define kTNBPopularStoriesURL kTNBBaseURL @"/mobile/api/stories/popular"
 
+#define kTNBAllPromptsURL kTNBBaseURL @"/mobile/api/prompts/all"
+
 // NSUserDefaults Login Keys
 #define kTNBNSUserDefaultsTokenKey @"kTNBNSUserDefaultsTokenKey"
 #define kTNBNSUserDefaultsEmailKey @"kTNBNSUserDefaultsEmailKey"

@@ -72,11 +72,11 @@
             </objects>
             <point key="canvasLocation" x="3132" y="-592"/>
         </scene>
-        <!--Pull To Refresh Table View Controller - Root View Controller-->
+        <!--All Prompts View Controller - Root View Controller-->
         <scene sceneID="gqo-aD-Hl6">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRy-KX-6oD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="Ofg-Sv-JE1" customClass="TNBPullToRefreshTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="allPromptsController" id="Ofg-Sv-JE1" customClass="TNBAllPromptsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hfI-DU-ndZ">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,21 +98,55 @@
             </objects>
             <point key="canvasLocation" x="3320" y="48"/>
         </scene>
+        <!--All Stories View Controller-->
+        <scene sceneID="j7z-nE-tDg">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUA-2u-Iev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController storyboardIdentifier="allStoriesController" id="bNp-64-VcS" customClass="TNBAllStoriesViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="61" sectionHeaderHeight="22" sectionFooterHeight="22" id="i3N-Qe-ugM">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YgB-4f-C18">
+                                <rect key="frame" x="0.0" y="22" width="320" height="61"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bNp-64-VcS" id="QIu-6k-9fP"/>
+                            <outlet property="delegate" destination="bNp-64-VcS" id="urh-7G-KfH"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <swipeGestureRecognizer direction="right" id="5sD-Vy-37l">
+                    <connections>
+                        <action selector="swipe:" destination="bNp-64-VcS" id="6W1-fr-ihQ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3927" y="0.0"/>
+        </scene>
         <!--Pull To Refresh Table View Controller - Root View Controller-->
         <scene sceneID="hbS-UI-3Bi">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YhO-6Q-sRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="2KB-LI-K9r" customClass="TNBPullToRefreshTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VHC-Hm-WmW">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="61" sectionHeaderHeight="22" sectionFooterHeight="22" id="VHC-Hm-WmW">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="asdf" id="u4Z-UD-NDx">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -148,16 +182,16 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lve-J9-Y94" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="zeE-Gw-ipv" customClass="TNBPullToRefreshTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fJD-3s-fcR">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="61" sectionHeaderHeight="22" sectionFooterHeight="22" id="fJD-3s-fcR">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="asdf" id="jVQ-te-q85">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -197,11 +231,11 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rFn-Kd-8ZT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rFn-Kd-8ZT">
                                 <rect key="frame" x="228" y="20" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Pop">
+                                <state key="normal" image="arrow.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -212,15 +246,26 @@
                                     <action selector="doneButtonPressed:" destination="5Fs-ra-AYd" eventType="touchUpInside" id="S80-f0-nyA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Prefs Go Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="YgE-sP-slv">
-                                <rect key="frame" x="82" y="71" width="109" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Preferences" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="YgE-sP-slv">
+                                <rect key="frame" x="106" y="84" width="109" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Incomplete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="O7d-Ch-gQi">
+                                <rect key="frame" x="106" y="290" width="109" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="mainLogo.png" id="Puw-cs-mpx">
+                                <rect key="frame" x="40" y="134" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.38823533059999998" blue="0.015686275440000001" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="iCH-QB-1H6"/>
                 </viewController>
@@ -378,7 +423,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="u6L-4S-GCp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="u6L-4S-GCp" userLabel="prefsbutton">
                                 <rect key="frame" x="20" y="3" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -393,6 +438,21 @@
                                     <segue destination="5Fs-ra-AYd" kind="modal" id="Njn-Ww-pGh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7rb-IA-3YR" userLabel="backbutton">
+                                <rect key="frame" x="20" y="3" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="backNav.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonWasPressed:" destination="yfE-dX-8s9" eventType="touchUpInside" id="WQQ-xF-mYv"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mainLogo.png" id="WdK-6E-ww7">
                                 <rect key="frame" x="108" y="3" width="105" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -402,8 +462,10 @@
                     </view>
                     <connections>
                         <outlet property="allStoriesButton" destination="ak5-TZ-MlJ" id="kve-rr-a5r"/>
+                        <outlet property="backButton" destination="7rb-IA-3YR" id="3O4-k3-JRM"/>
                         <outlet property="myFavoritesButton" destination="Qh1-bG-mnx" id="1cF-hj-rbs"/>
                         <outlet property="navBarBackground" destination="KFv-o2-qW7" id="alh-Zw-qme"/>
+                        <outlet property="prefsButton" destination="u6L-4S-GCp" id="7TS-M0-ta0"/>
                         <outlet property="readingListButton" destination="LDL-i8-avV" id="Uze-s2-HCZ"/>
                         <outlet property="subView" destination="hHK-wL-enB" id="WvU-Hm-hM5"/>
                         <outlet property="tabBarBackground" destination="vdc-4J-nUd" id="M5j-tJ-ALN"/>
@@ -608,6 +670,8 @@
     <resources>
         <image name="allStories@2x.png" width="128" height="102"/>
         <image name="allStoriesActive.png" width="128" height="102"/>
+        <image name="arrow.png" width="75" height="166"/>
+        <image name="backNav.png" width="94" height="74"/>
         <image name="mainLogo.png" width="16" height="16"/>
         <image name="myFavorites@2x.png" width="128" height="102"/>
         <image name="myFavoritesActive.png" width="128" height="102"/>
@@ -622,10 +686,20 @@
         <image name="topStoriesActive.png" width="128" height="102"/>
     </resources>
     <classes>
+        <class className="TNBAllPromptsViewController" superclassName="TNBPullToRefreshTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBAllPromptsViewController.h"/>
+        </class>
+        <class className="TNBAllStoriesViewController" superclassName="TNBPullToRefreshTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBAllStoriesViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="swipe:"/>
+            </relationships>
+        </class>
         <class className="TNBHackaTabController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBHackaTabController.h"/>
             <relationships>
                 <relationship kind="action" name="allStoriesButtonWasPressed:"/>
+                <relationship kind="action" name="backButtonWasPressed:"/>
                 <relationship kind="action" name="myFavoritesButtonWasPressed:"/>
                 <relationship kind="action" name="readingListButtonWasPressed:"/>
                 <relationship kind="action" name="thisWeekButtonWasPressed:"/>

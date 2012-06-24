@@ -8,10 +8,6 @@
 
 #import "TNBHackaTabController.h"
 
-@interface TNBHackaTabController ()
-
-@end
-
 @implementation TNBHackaTabController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -68,6 +64,18 @@
     
     currentNavController = thisWeekNavController;
     currentDepressedButton = thisWeekButton;
+}
+
+-(void)viewWillLayoutSubviews {
+    
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [self shouldDisplayBackButton];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [self shouldDisplayPrefsButton];
 }
 
 - (void)viewDidUnload
@@ -149,4 +157,19 @@
     currentNavController = myFavoritesNavController;
 }
 
+-(void)shouldDisplayBackButton {
+    NSLog(@"****Should display back.");
+    backButton.hidden = NO;
+    prefsButton.hidden = YES;
+}
+
+-(void)shouldDisplayPrefsButton {
+     NSLog(@"****Should display prefs.");
+    backButton.hidden = YES;
+    prefsButton.hidden = NO;
+}
+
+-(IBAction)backButtonWasPressed:(id)sender {
+    [currentNavController popViewControllerAnimated:YES];
+}
 @end

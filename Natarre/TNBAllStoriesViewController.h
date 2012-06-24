@@ -1,5 +1,5 @@
 //
-//  TNBThisWeekViewController.h
+//  TNBAllStoriesViewController.h
 //  Natarre
 //
 //  Created by Thomas Beatty on 6/24/12.
@@ -9,21 +9,26 @@
 #import "TNBPullToRefreshTableViewController.h"
 #import "TNBAppDelegate.h"
 
-#import "TNBAllStoriesViewController.h"
 #import "TNBReaderViewController.h"
 
 // Supporting Files
 #import "TNBStoriesManager.h"
 #import "TNBStoryCell.h"
 
-@interface TNBThisWeekViewController : TNBPullToRefreshTableViewController {
-    NSArray * storyList;
+@interface TNBAllStoriesViewController : TNBPullToRefreshTableViewController {
+
+NSArray * storyList;
+    NSInteger promptID;
+    
 }
 
+@property(nonatomic)NSInteger promptID;
 @property(nonatomic, strong)NSArray * storyList;
 
 -(void)refresh;
 
 -(TNBStoryCell *)configureCell:(TNBStoryCell *)cell withArrayIndex:(NSInteger)index;
+
+-(IBAction)swipe:(id)sender;
 
 @end

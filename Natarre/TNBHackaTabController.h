@@ -46,4 +46,9 @@
 -(IBAction)readingListButtonWasPressed:(id)sender;
 -(IBAction)myFavoritesButtonWasPressed:(id)sender;
 
+-(IBAction)backButtonWasPressed:(id)sender;
+
+-(void)shouldDisplayBackButton;
+-(void)shouldDisplayPrefsButton;
+
 @end

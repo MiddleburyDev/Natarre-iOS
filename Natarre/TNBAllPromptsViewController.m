@@ -1,26 +1,27 @@
 //
-//  TNBTopStoriesTableViewController.m
+//  TNBAllPromptsViewController.m
 //  Natarre
 //
 //  Created by Thomas Beatty on 6/24/12.
 //  Copyright (c) 2012 Nate Beatty. All rights reserved.
 //
 
-#import "TNBTopStoriesTableViewController.h"
+#import "TNBAllPromptsViewController.h"
 
-@interface TNBTopStoriesTableViewController (TNBStoriesManagerDelegate) <TNBStoriesManagerDelegate>
-
--(void)successfullyDownloadedStories:(NSArray *)stories;
+@interface TNBAllPromptsViewController ()
 
 @end
 
-@interface TNBTopStoriesTableViewController (InternalMethods)
--(TNBStoryCell *)configureCell:(TNBStoryCell *)cell;
-@end
+// fackit
+//@interface TNBAllPromptsViewController (TNBStoriesManagerDelegate) <TNBStoriesManagerDelegate>
+//
+//-(void)successfullyDownloadedPrompts:(NSArray *)prompts;
+//
+//@end
 
-@implementation TNBTopStoriesTableViewController
+@implementation TNBAllPromptsViewController
 
-@synthesize storyList;
+@synthesize allPrompts;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,17 +55,17 @@
 
 -(void)refresh {
     NSLog(@"Refresh was called.");
+    
     TNBStoriesManager * storiesManager = [[TNBStoriesManager alloc] init];
-    storiesManager.delegate = self;
     
-    TNBCurrentUser * user = [[TNBLoginManager defaultManager] currentUser];
+    NSArray * thePrompts = [storiesManager getAllPrompts];
     
-    NSArray * objects = [NSArray arrayWithObjects:user.email, user.token, nil];
-    NSArray * keys = [NSArray arrayWithObjects:@"email", @"token", nil];
-    
-    NSDictionary * keypairs = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
-    [storiesManager generateRequestWithKeyPairs:keypairs sendToURL:[NSURL URLWithString:kTNBPopularStoriesURL]];
-    [storiesManager sendGeneratedRequest];
+    if (thePrompts) {
+        self.allPrompts = thePrompts;
+        [self.tableView reloadData];
+    } else {
+        NSLog(@"There was an error loading the prompts");
+    }
     
     // ** !!! ** KEEP DO NOT DELETE ** !!! ** //
     [self stopLoading];
@@ -81,8 +82,22 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"number of cells to show: %d", storyList.count);
-    return storyList.count;
+    NSLog(@"number of cells to show: %d", allPrompts.count);
+    return self.allPrompts.count;
+}
+
+-(TNBStoryCell *)configureCell:(TNBStoryCell *)cell withArrayIndex:(NSInteger)index {
+    
+    NSLog(@"Configuring Cell!");
+    
+    TNBStory * story = [self.allPrompts objectAtIndex:index];
+    
+    cell.titleLabel.text = story.title;
+    cell.authorLabel.text = @"";
+    
+    cell.paintSplatImageView.image = nil;
+    
+    return cell;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -111,43 +126,12 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
     
-    TNBReaderViewController * readerVC = (TNBReaderViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"readerViewController"];
+    TNBAllStoriesViewController * readerVC = (TNBAllStoriesViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"allStoriesController"];
     
-    NSLog(@"Fucking Content: %@", [[self.storyList objectAtIndex:[indexPath indexAtPosition:1]] content]);
     
-    readerVC.story = [self.storyList objectAtIndex:[indexPath indexAtPosition:1]];
-    
-    [readerVC loadStory];
+    readerVC.promptID = [[self.allPrompts objectAtIndex:[indexPath indexAtPosition:1]] storyID];
         [(TNBHackaTabController *)self.navigationController.parentViewController shouldDisplayBackButton];
     [self.navigationController pushViewController:readerVC animated:YES];
-}
-
--(TNBStoryCell *)configureCell:(TNBStoryCell *)cell withArrayIndex:(NSInteger)index {
-    
-    NSLog(@"Configuring Cell!");
-    
-    TNBStory * story = [self.storyList objectAtIndex:index];
-    
-    cell.titleLabel.text = story.title;
-    cell.authorLabel.text = story.authorName;
-    
-    if (story.audioURL != nil) {
-        cell.paintSplatImageView.image = [UIImage imageNamed:@"greenDot"];
-    } else {
-        cell.paintSplatImageView.image = [UIImage imageNamed:@"purpleDot"];
-    }
-    
-    return cell;
-}
-
-@end
-
-@implementation TNBTopStoriesTableViewController (TNBStoriesManagerDelegate)
-
--(void)successfullyDownloadedStories:(NSArray *)stories {
-    NSLog(@"Reloading Data: %@", stories);
-    self.storyList = stories;
-    [self.tableView reloadData];
 }
 
 @end

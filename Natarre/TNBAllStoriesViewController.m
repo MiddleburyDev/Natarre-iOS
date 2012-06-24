@@ -1,26 +1,27 @@
 //
-//  TNBTopStoriesTableViewController.m
+//  TNBAllStoriesViewController.m
 //  Natarre
 //
 //  Created by Thomas Beatty on 6/24/12.
 //  Copyright (c) 2012 Nate Beatty. All rights reserved.
 //
 
-#import "TNBTopStoriesTableViewController.h"
+#import "TNBAllStoriesViewController.h"
 
-@interface TNBTopStoriesTableViewController (TNBStoriesManagerDelegate) <TNBStoriesManagerDelegate>
+@interface TNBAllStoriesViewController (TNBStoriesManagerDelegate) <TNBStoriesManagerDelegate>
+
 
 -(void)successfullyDownloadedStories:(NSArray *)stories;
 
 @end
 
-@interface TNBTopStoriesTableViewController (InternalMethods)
+@interface TNBAllStoriesViewController (InternalMethods)
 -(TNBStoryCell *)configureCell:(TNBStoryCell *)cell;
 @end
 
-@implementation TNBTopStoriesTableViewController
+@implementation TNBAllStoriesViewController
 
-@synthesize storyList;
+@synthesize storyList, promptID;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,6 +36,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self refresh];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -59,11 +61,11 @@
     
     TNBCurrentUser * user = [[TNBLoginManager defaultManager] currentUser];
     
-    NSArray * objects = [NSArray arrayWithObjects:user.email, user.token, nil];
-    NSArray * keys = [NSArray arrayWithObjects:@"email", @"token", nil];
+    NSArray * objects = [NSArray arrayWithObjects:user.email, user.token, self.promptID, nil];
+    NSArray * keys = [NSArray arrayWithObjects:@"email", @"token", @"prompt_ID", nil];
     
     NSDictionary * keypairs = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
-    [storiesManager generateRequestWithKeyPairs:keypairs sendToURL:[NSURL URLWithString:kTNBPopularStoriesURL]];
+    [storiesManager generateRequestWithKeyPairs:keypairs sendToURL:[NSURL URLWithString:kTNBStoriesForPromptURL]];
     [storiesManager sendGeneratedRequest];
     
     // ** !!! ** KEEP DO NOT DELETE ** !!! ** //
@@ -118,7 +120,6 @@
     readerVC.story = [self.storyList objectAtIndex:[indexPath indexAtPosition:1]];
     
     [readerVC loadStory];
-        [(TNBHackaTabController *)self.navigationController.parentViewController shouldDisplayBackButton];
     [self.navigationController pushViewController:readerVC animated:YES];
 }
 
@@ -140,9 +141,14 @@
     return cell;
 }
 
+-(IBAction)swipe:(id)sender {
+        [(TNBHackaTabController *)self.navigationController.parentViewController shouldDisplayPrefsButton];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 @end
 
-@implementation TNBTopStoriesTableViewController (TNBStoriesManagerDelegate)
+@implementation TNBAllStoriesViewController (TNBStoriesManagerDelegate)
 
 -(void)successfullyDownloadedStories:(NSArray *)stories {
     NSLog(@"Reloading Data: %@", stories);

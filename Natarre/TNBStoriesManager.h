@@ -19,6 +19,7 @@
 
 -(void)successfullyDownloadedStories:(NSArray *)stories;
 
+
 @end
 
 @interface TNBStoriesManager : NSObject {
@@ -32,6 +33,8 @@
 
 // Returns a prompt ID
 -(NSInteger)thisWeeksPrompt;
+
+-(NSArray *)getAllPrompts;
 
 -(void)generateRequestWithKeyPairs:(NSDictionary *)keyPairs sendToURL:(NSURL *)apiURL;
 

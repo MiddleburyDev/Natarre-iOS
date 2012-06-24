@@ -14,10 +14,6 @@
 
 @end
 
-@interface TNBThisWeekViewController (InternalMethods)
--(TNBStoryCell *)configureCell:(TNBStoryCell *)cell;
-@end
-
 @implementation TNBThisWeekViewController
 
 @synthesize storyList;
@@ -39,13 +35,16 @@
 	// Do any additional setup after loading the view.
     
     //storyList = [NSArray
-    [self refresh];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [self refresh];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -137,6 +136,7 @@
     readerVC.story = [self.storyList objectAtIndex:[indexPath indexAtPosition:1]];
     
     [readerVC loadStory];
+    [(TNBHackaTabController *)self.navigationController.parentViewController shouldDisplayBackButton];
     [self.navigationController pushViewController:readerVC animated:YES];
 }
 

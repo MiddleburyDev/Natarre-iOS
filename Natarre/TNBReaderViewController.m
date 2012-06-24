@@ -60,10 +60,12 @@
 #pragma mark - Button Handling
 
 -(IBAction)backButtonPressed:(id)sender {
+    [(TNBHackaTabController *)self.navigationController.parentViewController shouldDisplayPrefsButton];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(IBAction)swipeRightDetected:(id)sender {
+    [(TNBHackaTabController *)self.navigationController.parentViewController shouldDisplayPrefsButton];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

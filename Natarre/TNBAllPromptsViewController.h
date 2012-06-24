@@ -1,5 +1,5 @@
 //
-//  TNBThisWeekViewController.h
+//  TNBAllPromptsViewController.h
 //  Natarre
 //
 //  Created by Thomas Beatty on 6/24/12.
@@ -10,17 +10,16 @@
 #import "TNBAppDelegate.h"
 
 #import "TNBAllStoriesViewController.h"
-#import "TNBReaderViewController.h"
 
 // Supporting Files
 #import "TNBStoriesManager.h"
 #import "TNBStoryCell.h"
 
-@interface TNBThisWeekViewController : TNBPullToRefreshTableViewController {
-    NSArray * storyList;
+@interface TNBAllPromptsViewController : TNBPullToRefreshTableViewController {
+    NSArray * allPrompts;
 }
 
-@property(nonatomic, strong)NSArray * storyList;
+@property(nonatomic, strong)NSArray * allPrompts;
 
 -(void)refresh;
 

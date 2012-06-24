@@ -71,6 +71,56 @@
     return (NSInteger)[responseDictionary objectForKey:@"id"];
 }
 
+-(NSArray *)getAllPrompts {
+    NSLog(@"TNBStoriesManager: Will generate POST request");
+    
+    TNBCurrentUser * user = [[TNBLoginManager defaultManager] currentUser];
+    
+    NSDictionary * args = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:user.email, user.token, nil] forKeys:[NSArray arrayWithObjects:@"email", @"token", nil]];
+    
+    // Set the params for the request
+    NSMutableString * params = [NSMutableString stringWithCapacity:200];
+    NSString * key;
+    for (key in args) {
+        NSLog(@"TNBStoriesManager: Appending value: %@ for key: %@ to the params.", [args objectForKey:key], key);
+        [params appendString:[NSString stringWithFormat:@"%@=%@&", key, [args objectForKey:key]]];
+    }
+    
+    // Generate the request
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:kTNBAllPromptsURL]];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    // Keep track of any errors
+    NSError * error;
+    
+    // Send the request
+    NSData * responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
+    
+    NSLog(@"Response for ********* Prompts: %@", [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
+    
+    if (!responseData) return 0;
+    
+    NSError * theError;
+    NSDictionary * responseDictionary = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&theError];
+    
+    // Returns nil if there was an error
+    if (error) {
+        NSLog(@"TNBStoriesManager: !!!Error occurred while sending the post request: %@.", error);
+        
+        return 0;
+    }
+    NSMutableArray * objects = [[NSMutableArray alloc] initWithCapacity:responseDictionary.count];
+    for (id dic in responseDictionary) {
+        NSLog(@"Parsing dictionary into story");
+        TNBStory * prompt = [[TNBStory alloc] init];
+        prompt.storyID = (NSInteger)[dic objectForKey:@"id"];
+        prompt.title = (NSString *)[dic objectForKey:@"question"];
+        [objects addObject:prompt];
+    }
+    return objects;
+}
+
 -(void)generateRequestWithKeyPairs:(NSDictionary *)keyPairs sendToURL:(NSURL *)apiURL {
     NSLog(@"TNBStoriesManager: Will generate POST request to send to %@.", [apiURL absoluteURL]);
     

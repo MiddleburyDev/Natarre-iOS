@@ -13,6 +13,8 @@
 		965CBC1915975B9E001B1EAA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 965CBC1715975B9E001B1EAA /* Default@2x.png */; };
 		965CBC1B15975CD6001B1EAA /* mainLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 965CBC1A15975CD6001B1EAA /* mainLogo.png */; };
 		965CBC1E15975EB7001B1EAA /* TNBTopStoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965CBC1D15975EB7001B1EAA /* TNBTopStoriesTableViewController.m */; };
+		965CBC2115976354001B1EAA /* TNBAllStoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965CBC2015976354001B1EAA /* TNBAllStoriesViewController.m */; };
+		965CBC2415976732001B1EAA /* TNBAllPromptsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965CBC2315976732001B1EAA /* TNBAllPromptsViewController.m */; };
 		96CCB5D91596787100CEC1BD /* TNBLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5D81596787100CEC1BD /* TNBLoginManager.m */; };
 		96CCB5DD1596791D00CEC1BD /* TNBCurrentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5DC1596791D00CEC1BD /* TNBCurrentUser.m */; };
 		96CCB5E115967BC700CEC1BD /* TNBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5E015967BC700CEC1BD /* TNBLoginViewController.m */; };
@@ -75,6 +77,10 @@
 		965CBC1A15975CD6001B1EAA /* mainLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainLogo.png; sourceTree = "<group>"; };
 		965CBC1C15975EB7001B1EAA /* TNBTopStoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBTopStoriesTableViewController.h; sourceTree = "<group>"; };
 		965CBC1D15975EB7001B1EAA /* TNBTopStoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBTopStoriesTableViewController.m; sourceTree = "<group>"; };
+		965CBC1F15976354001B1EAA /* TNBAllStoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBAllStoriesViewController.h; sourceTree = "<group>"; };
+		965CBC2015976354001B1EAA /* TNBAllStoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBAllStoriesViewController.m; sourceTree = "<group>"; };
+		965CBC2215976732001B1EAA /* TNBAllPromptsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBAllPromptsViewController.h; sourceTree = "<group>"; };
+		965CBC2315976732001B1EAA /* TNBAllPromptsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBAllPromptsViewController.m; sourceTree = "<group>"; };
 		96CCB5D71596787100CEC1BD /* TNBLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBLoginManager.h; sourceTree = "<group>"; };
 		96CCB5D81596787100CEC1BD /* TNBLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBLoginManager.m; sourceTree = "<group>"; };
 		96CCB5DB1596791C00CEC1BD /* TNBCurrentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBCurrentUser.h; sourceTree = "<group>"; };
@@ -290,6 +296,10 @@
 				96DE21FF1596F844002E914C /* TNBThisWeekViewController.m */,
 				965CBC1C15975EB7001B1EAA /* TNBTopStoriesTableViewController.h */,
 				965CBC1D15975EB7001B1EAA /* TNBTopStoriesTableViewController.m */,
+				965CBC2215976732001B1EAA /* TNBAllPromptsViewController.h */,
+				965CBC2315976732001B1EAA /* TNBAllPromptsViewController.m */,
+				965CBC1F15976354001B1EAA /* TNBAllStoriesViewController.h */,
+				965CBC2015976354001B1EAA /* TNBAllStoriesViewController.m */,
 			);
 			name = "First Subtabs";
 			sourceTree = "<group>";
@@ -501,6 +511,8 @@
 				96DE2237159744BC002E914C /* TNBPrefsViewController.m in Sources */,
 				965CBC1115974BE6001B1EAA /* TNBReaderViewController.m in Sources */,
 				965CBC1E15975EB7001B1EAA /* TNBTopStoriesTableViewController.m in Sources */,
+				965CBC2115976354001B1EAA /* TNBAllStoriesViewController.m in Sources */,
+				965CBC2415976732001B1EAA /* TNBAllPromptsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
