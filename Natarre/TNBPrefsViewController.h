@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TNBPrefsViewController : UIViewController
+@interface TNBPrefsViewController : UIViewController {
+    
+}
 
 -(IBAction)doneButtonPressed:(id)sender;
 

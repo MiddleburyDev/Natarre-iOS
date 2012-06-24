@@ -37,6 +37,7 @@
 	// Do any additional setup after loading the view.
     
     //storyList = [NSArray
+    [self refresh];
 }
 
 - (void)viewDidUnload
@@ -126,6 +127,10 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    
+    TNBReaderViewController * readerVC = (TNBReaderViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"readerViewController"];
+    [readerVC loadStory:[storyList objectAtIndex:[indexPath indexAtPosition:1]]];
+    [self.navigationController pushViewController:readerVC animated:YES];
 }
 
 @end

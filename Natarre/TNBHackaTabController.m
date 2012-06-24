@@ -84,6 +84,7 @@
 #pragma mark - Button Handling
 
 -(IBAction)thisWeekButtonWasPressed:(id)sender {
+    if (currentNavController == thisWeekNavController) return;
     [self transitionFromViewController:currentNavController 
                       toViewController:thisWeekNavController 
                               duration:0.0 
@@ -96,6 +97,7 @@
     currentNavController = thisWeekNavController;
 }
 -(IBAction)topStoriesButtonWasPressed:(id)sender {
+    if (currentNavController == topStoriesNavController) return;
     [self transitionFromViewController:currentNavController 
                       toViewController:topStoriesNavController 
                               duration:0.0 
@@ -108,6 +110,7 @@
     currentNavController = topStoriesNavController;
 }
 -(IBAction)allStoriesButtonWasPressed:(id)sender {
+    if (currentNavController == allStoriesNavController) return;
     [self transitionFromViewController:currentNavController 
                       toViewController:allStoriesNavController 
                               duration:0.0 
@@ -120,6 +123,7 @@
     currentNavController = allStoriesNavController;
 }
 -(IBAction)readingListButtonWasPressed:(id)sender {
+    if (currentNavController == readingListNavController) return;
     [self transitionFromViewController:currentNavController 
                       toViewController:readingListNavController 
                               duration:0.0 
@@ -132,6 +136,7 @@
     currentNavController = readingListNavController;
 }
 -(IBAction)myFavoritesButtonWasPressed:(id)sender {
+    if (currentNavController == myFavoritesNavController) return;
     [self transitionFromViewController:currentNavController 
                       toViewController:myFavoritesNavController 
                               duration:0.0 

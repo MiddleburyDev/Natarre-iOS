@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		965CBC0D15974A48001B1EAA /* backNav.png in Resources */ = {isa = PBXBuildFile; fileRef = 965CBC0C15974A48001B1EAA /* backNav.png */; };
+		965CBC1115974BE6001B1EAA /* TNBReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 965CBC1015974BE6001B1EAA /* TNBReaderViewController.m */; };
 		96CCB5D91596787100CEC1BD /* TNBLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5D81596787100CEC1BD /* TNBLoginManager.m */; };
 		96CCB5DD1596791D00CEC1BD /* TNBCurrentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5DC1596791D00CEC1BD /* TNBCurrentUser.m */; };
 		96CCB5E115967BC700CEC1BD /* TNBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5E015967BC700CEC1BD /* TNBLoginViewController.m */; };
@@ -62,6 +64,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		965CBC0C15974A48001B1EAA /* backNav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backNav.png; sourceTree = "<group>"; };
+		965CBC0F15974BE5001B1EAA /* TNBReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBReaderViewController.h; sourceTree = "<group>"; };
+		965CBC1015974BE6001B1EAA /* TNBReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBReaderViewController.m; sourceTree = "<group>"; };
 		96CCB5D71596787100CEC1BD /* TNBLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBLoginManager.h; sourceTree = "<group>"; };
 		96CCB5D81596787100CEC1BD /* TNBLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBLoginManager.m; sourceTree = "<group>"; };
 		96CCB5DB1596791C00CEC1BD /* TNBCurrentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBCurrentUser.h; sourceTree = "<group>"; };
@@ -183,6 +188,8 @@
 				96DE21DE1596E0EB002E914C /* TNBHackaTabController.m */,
 				96DE2235159744BC002E914C /* TNBPrefsViewController.h */,
 				96DE2236159744BC002E914C /* TNBPrefsViewController.m */,
+				965CBC0F15974BE5001B1EAA /* TNBReaderViewController.h */,
+				965CBC1015974BE6001B1EAA /* TNBReaderViewController.m */,
 				96DE22011596F848002E914C /* Table View Controllers */,
 				96DE22171596FBF7002E914C /* Table View Components */,
 				96CCB5E315967BD900CEC1BD /* Login VC's */,
@@ -252,6 +259,7 @@
 				96DE21E61596ECEC002E914C /* tabBarBackground.png */,
 				96DE21E71596ECEC002E914C /* tabBarBackground@2x.png */,
 				96DE222D159742D8002E914C /* prefsNav.png */,
+				965CBC0C15974A48001B1EAA /* backNav.png */,
 				96DE222E159742D8002E914C /* submitNav.png */,
 				96DE21DC1596DE79002E914C /* Tab Bar Buttons */,
 			);
@@ -451,6 +459,7 @@
 				96DE222B15974084002E914C /* purpleDot.png in Resources */,
 				96DE222F159742D8002E914C /* prefsNav.png in Resources */,
 				96DE2230159742D8002E914C /* submitNav.png in Resources */,
+				965CBC0D15974A48001B1EAA /* backNav.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +488,7 @@
 				96DE221A1597032F002E914C /* TNBSampleTableViewController.m in Sources */,
 				96DE22271597186C002E914C /* TNBStory.m in Sources */,
 				96DE2237159744BC002E914C /* TNBPrefsViewController.m in Sources */,
+				965CBC1115974BE6001B1EAA /* TNBReaderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

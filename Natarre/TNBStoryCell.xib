@@ -56,7 +56,7 @@
 					<object class="IBUILabel" id="1014969156">
 						<reference key="NSNextResponder" ref="231025238"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{54, 10}, {229, 21}}</string>
+						<string key="NSFrame">{{54, 10}, {246, 21}}</string>
 						<reference key="NSSuperview" ref="231025238"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="116754465"/>
@@ -73,7 +73,7 @@
 						</object>
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
-						<float key="IBUIMinimumFontSize">10</float>
+						<float key="IBUIMinimumFontSize">17</float>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
 							<int key="type">1</int>
 							<double key="pointSize">17</double>
@@ -83,6 +83,7 @@
 							<double key="NSSize">17</double>
 							<int key="NSfFlags">16</int>
 						</object>
+						<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 					</object>
 					<object class="IBUILabel" id="116754465">
 						<reference key="NSNextResponder" ref="231025238"/>
@@ -90,7 +91,6 @@
 						<string key="NSFrame">{{54, 30}, {207, 21}}</string>
 						<reference key="NSSuperview" ref="231025238"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:328</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>

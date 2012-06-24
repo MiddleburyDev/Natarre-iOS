@@ -9,6 +9,8 @@
 #import "TNBPullToRefreshTableViewController.h"
 #import "TNBAppDelegate.h"
 
+#import "TNBReaderViewController.h"
+
 // Supporting Files
 #import "TNBStoriesManager.h"
 #import "TNBStoryCell.h"

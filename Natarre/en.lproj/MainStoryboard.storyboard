@@ -220,12 +220,50 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.38823533059999998" blue="0.015686275440000001" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="iCH-QB-1H6"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1120" y="-202"/>
+            <point key="canvasLocation" x="752" y="278"/>
+        </scene>
+        <!--Reader View Controller-->
+        <scene sceneID="xM9-w7-efe">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OKF-GC-jhH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="readerViewController" id="6ht-8m-Xgn" customClass="TNBReaderViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mcq-qX-8sd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="PNi-ke-gZp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cgi-HV-myr" appends="YES" id="5eP-5K-Dtb"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="textView" destination="PNi-ke-gZp" id="gKi-EF-0c8"/>
+                    </connections>
+                </viewController>
+                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="cgi-HV-myr">
+                    <connections>
+                        <action selector="swipeRightDetected:" destination="6ht-8m-Xgn" id="D0A-LM-8uq"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1386" y="-232"/>
         </scene>
         <!--Hacka Tab Controller-->
         <scene sceneID="4gd-wa-ub2">
@@ -328,21 +366,6 @@
                                     <action selector="readingListButtonWasPressed:" destination="yfE-dX-8s9" eventType="touchUpInside" id="3GL-ln-dy2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tUs-0i-Mxf">
-                                <rect key="frame" x="20" y="3" width="72" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="prefsNav.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="5Fs-ra-AYd" kind="push" id="E7J-1H-SFp"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9fQ-GC-PkY">
                                 <rect key="frame" x="228" y="3" width="72" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -354,6 +377,21 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="u6L-4S-GCp">
+                                <rect key="frame" x="20" y="3" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="prefsNav.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5Fs-ra-AYd" kind="modal" id="Njn-Ww-pGh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -588,8 +626,10 @@
                 <relationship kind="action" name="thisWeekButtonWasPressed:"/>
                 <relationship kind="action" name="topStoriesButtonWasPressed:"/>
                 <relationship kind="outlet" name="allStoriesButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="myFavoritesButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="navBarBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="prefsButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="readingListButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="subView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="tabBarBackground" candidateClass="UIImageView"/>
@@ -615,6 +655,14 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBPullToRefreshTableViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="tblCell" candidateClass="TNBStoryCell"/>
+            </relationships>
+        </class>
+        <class className="TNBReaderViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBReaderViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="backButtonPressed:"/>
+                <relationship kind="action" name="swipeRightDetected:"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
             </relationships>
         </class>
         <class className="TNBRegisterViewController" superclassName="UIViewController">

@@ -34,6 +34,10 @@
     
     // Subview to contain the little fuckers.
     IBOutlet UIView * subView;
+    
+    // Buttons
+    IBOutlet UIButton * prefsButton;
+    IBOutlet UIButton * backButton;
 }
 
 -(IBAction)thisWeekButtonWasPressed:(id)sender;
