@@ -46,6 +46,11 @@
 		96DE221A1597032F002E914C /* TNBSampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE22191597032F002E914C /* TNBSampleTableViewController.m */; };
 		96DE222015971244002E914C /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DE221F15971244002E914C /* arrow.png */; };
 		96DE22271597186C002E914C /* TNBStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE22261597186C002E914C /* TNBStory.m */; };
+		96DE222A15974084002E914C /* greenDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DE222815974083002E914C /* greenDot.png */; };
+		96DE222B15974084002E914C /* purpleDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DE222915974084002E914C /* purpleDot.png */; };
+		96DE222F159742D8002E914C /* prefsNav.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DE222D159742D8002E914C /* prefsNav.png */; };
+		96DE2230159742D8002E914C /* submitNav.png in Resources */ = {isa = PBXBuildFile; fileRef = 96DE222E159742D8002E914C /* submitNav.png */; };
+		96DE2237159744BC002E914C /* TNBPrefsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DE2236159744BC002E914C /* TNBPrefsViewController.m */; };
 		96E185A51595F9AA00CFB0BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A41595F9AA00CFB0BF /* UIKit.framework */; };
 		96E185A71595F9AA00CFB0BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A61595F9AA00CFB0BF /* Foundation.framework */; };
 		96E185A91595F9AA00CFB0BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A81595F9AA00CFB0BF /* CoreGraphics.framework */; };
@@ -112,6 +117,12 @@
 		96DE221F15971244002E914C /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		96DE22251597186C002E914C /* TNBStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBStory.h; sourceTree = "<group>"; };
 		96DE22261597186C002E914C /* TNBStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBStory.m; sourceTree = "<group>"; };
+		96DE222815974083002E914C /* greenDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenDot.png; sourceTree = "<group>"; };
+		96DE222915974084002E914C /* purpleDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleDot.png; sourceTree = "<group>"; };
+		96DE222D159742D8002E914C /* prefsNav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prefsNav.png; sourceTree = "<group>"; };
+		96DE222E159742D8002E914C /* submitNav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submitNav.png; sourceTree = "<group>"; };
+		96DE2235159744BC002E914C /* TNBPrefsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBPrefsViewController.h; sourceTree = "<group>"; };
+		96DE2236159744BC002E914C /* TNBPrefsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBPrefsViewController.m; sourceTree = "<group>"; };
 		96E185A01595F9AA00CFB0BF /* Natarre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natarre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E185A41595F9AA00CFB0BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96E185A61595F9AA00CFB0BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -170,6 +181,8 @@
 				96E185BA1595F9AA00CFB0BF /* TNBRootViewController.m */,
 				96DE21DD1596E0EB002E914C /* TNBHackaTabController.h */,
 				96DE21DE1596E0EB002E914C /* TNBHackaTabController.m */,
+				96DE2235159744BC002E914C /* TNBPrefsViewController.h */,
+				96DE2236159744BC002E914C /* TNBPrefsViewController.m */,
 				96DE22011596F848002E914C /* Table View Controllers */,
 				96DE22171596FBF7002E914C /* Table View Components */,
 				96CCB5E315967BD900CEC1BD /* Login VC's */,
@@ -204,11 +217,12 @@
 		96CCB5FA1596C5E200CEC1BD /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				96DE22111596F8AD002E914C /* Icon Artwork */,
+				96DE222C15974088002E914C /* List View Art */,
 				96DE21EC1596ECF2002E914C /* Nav Bar Images */,
 				96DE221F15971244002E914C /* arrow.png */,
 				96DE21C01596CA1D002E914C /* tab_bar.png */,
 				96CCB5F81596C5DC00CEC1BD /* tab_bar@2x.png */,
+				96DE22111596F8AD002E914C /* Icon Artwork */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -237,6 +251,8 @@
 				96DE21E51596ECEC002E914C /* navBarBackground@2x.png */,
 				96DE21E61596ECEC002E914C /* tabBarBackground.png */,
 				96DE21E71596ECEC002E914C /* tabBarBackground@2x.png */,
+				96DE222D159742D8002E914C /* prefsNav.png */,
+				96DE222E159742D8002E914C /* submitNav.png */,
 				96DE21DC1596DE79002E914C /* Tab Bar Buttons */,
 			);
 			name = "Nav Bar Images";
@@ -285,6 +301,15 @@
 				96DE22151596FBF0002E914C /* TNBStoryCell.xib */,
 			);
 			name = "Table View Components";
+			sourceTree = "<group>";
+		};
+		96DE222C15974088002E914C /* List View Art */ = {
+			isa = PBXGroup;
+			children = (
+				96DE222815974083002E914C /* greenDot.png */,
+				96DE222915974084002E914C /* purpleDot.png */,
+			);
+			name = "List View Art";
 			sourceTree = "<group>";
 		};
 		96E185951595F9AA00CFB0BF = {
@@ -422,6 +447,10 @@
 				96DE22101596F89F002E914C /* iTunesArtwork in Resources */,
 				96DE22161596FBF0002E914C /* TNBStoryCell.xib in Resources */,
 				96DE222015971244002E914C /* arrow.png in Resources */,
+				96DE222A15974084002E914C /* greenDot.png in Resources */,
+				96DE222B15974084002E914C /* purpleDot.png in Resources */,
+				96DE222F159742D8002E914C /* prefsNav.png in Resources */,
+				96DE2230159742D8002E914C /* submitNav.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +478,7 @@
 				96DE22141596FBD8002E914C /* TNBStoryCell.m in Sources */,
 				96DE221A1597032F002E914C /* TNBSampleTableViewController.m in Sources */,
 				96DE22271597186C002E914C /* TNBStory.m in Sources */,
+				96DE2237159744BC002E914C /* TNBPrefsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

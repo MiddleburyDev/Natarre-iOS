@@ -64,7 +64,7 @@
     [storiesManager generateRequestWithKeyPairs:keypairs sendToURL:[NSURL URLWithString:kTNBStoriesForPromptURL]];
     [storiesManager sendGeneratedRequest];
     
-    // KEEP ---------------------------------
+    // ** !!! ** KEEP DO NOT DELETE ** !!! ** //
     [self stopLoading];
 }
 
@@ -78,7 +78,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete implementation
     // Return the number of rows in the section.
     NSLog(@"number of cells to show: %d", storyList.count);
     return storyList.count;
@@ -91,6 +90,13 @@
     TNBStory * story = [storyList objectAtIndex:index];
     
     cell.titleLabel.text = story.text;
+    cell.authorLabel.text = story.authorName;
+    
+    if (story.audioURL != nil) {
+        cell.paintSplatImageView.image = [UIImage imageNamed:@"greenDot"];
+    } else {
+        cell.paintSplatImageView.image = [UIImage imageNamed:@"purpleDot"];
+    }
     
     return cell;
 }
