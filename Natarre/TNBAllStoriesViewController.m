@@ -115,7 +115,7 @@
     
     TNBReaderViewController * readerVC = (TNBReaderViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"readerViewController"];
     
-    NSLog(@"Fucking Content: %@", [[self.storyList objectAtIndex:[indexPath indexAtPosition:1]] content]);
+    
     
     readerVC.story = [self.storyList objectAtIndex:[indexPath indexAtPosition:1]];
     
