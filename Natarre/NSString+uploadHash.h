@@ -2,8 +2,8 @@
 //  NSString+uploadHash.h
 //  Toast
 //
-//  Created by Thomas Beatty on 6/12/12.
-//  Copyright (c) 2012 Strabo. All rights reserved.
+//  Created by Thomas Beatty on 6/23/12.
+//  Copyright (c) 2012 Nate Beatty. All rights reserved.
 //
 
 #import "Constants.h"

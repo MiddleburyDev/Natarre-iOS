@@ -3,11 +3,11 @@
 //  Natarre
 //
 //  Created by Thomas Beatty on 6/23/12.
-//  Copyright (c) 2012 Strabo. All rights reserved.
+//  Copyright (c) 2012 Nate Beatty. All rights reserved.
 //
 
-#ifndef Natarre_Header_h
-#define Natarre_Header_h
+#ifndef Natarre_NSStringMods_h
+#define Natarre_NSStringMods_h
 
 #import "NSString+downloadHash.h"
 #import "NSString+uploadHash.h"

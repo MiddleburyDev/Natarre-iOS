@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96CCB5D91596787100CEC1BD /* TNBLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5D81596787100CEC1BD /* TNBLoginManager.m */; };
+		96CCB5DD1596791D00CEC1BD /* TNBCurrentUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5DC1596791D00CEC1BD /* TNBCurrentUser.m */; };
+		96CCB5E115967BC700CEC1BD /* TNBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5E015967BC700CEC1BD /* TNBLoginViewController.m */; };
+		96CCB5EE15968F8000CEC1BD /* NSString+downloadHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5E915968F8000CEC1BD /* NSString+downloadHash.m */; };
+		96CCB5EF15968F8000CEC1BD /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5EB15968F8000CEC1BD /* NSString+MD5.m */; };
+		96CCB5F015968F8000CEC1BD /* NSString+uploadHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5ED15968F8000CEC1BD /* NSString+uploadHash.m */; };
 		96E185A51595F9AA00CFB0BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A41595F9AA00CFB0BF /* UIKit.framework */; };
 		96E185A71595F9AA00CFB0BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A61595F9AA00CFB0BF /* Foundation.framework */; };
 		96E185A91595F9AA00CFB0BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A81595F9AA00CFB0BF /* CoreGraphics.framework */; };
@@ -14,10 +20,24 @@
 		96E185B11595F9AA00CFB0BF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E185B01595F9AA00CFB0BF /* main.m */; };
 		96E185B51595F9AA00CFB0BF /* TNBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E185B41595F9AA00CFB0BF /* TNBAppDelegate.m */; };
 		96E185B81595F9AA00CFB0BF /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E185B61595F9AA00CFB0BF /* MainStoryboard.storyboard */; };
-		96E185BB1595F9AA00CFB0BF /* TNBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E185BA1595F9AA00CFB0BF /* TNBViewController.m */; };
+		96E185BB1595F9AA00CFB0BF /* TNBRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E185BA1595F9AA00CFB0BF /* TNBRootViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96CCB5D71596787100CEC1BD /* TNBLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBLoginManager.h; sourceTree = "<group>"; };
+		96CCB5D81596787100CEC1BD /* TNBLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBLoginManager.m; sourceTree = "<group>"; };
+		96CCB5DB1596791C00CEC1BD /* TNBCurrentUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBCurrentUser.h; sourceTree = "<group>"; };
+		96CCB5DC1596791D00CEC1BD /* TNBCurrentUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBCurrentUser.m; sourceTree = "<group>"; };
+		96CCB5DF15967BC700CEC1BD /* TNBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBLoginViewController.h; sourceTree = "<group>"; };
+		96CCB5E015967BC700CEC1BD /* TNBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBLoginViewController.m; sourceTree = "<group>"; };
+		96CCB5E815968F7F00CEC1BD /* NSString+downloadHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+downloadHash.h"; sourceTree = "<group>"; };
+		96CCB5E915968F8000CEC1BD /* NSString+downloadHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+downloadHash.m"; sourceTree = "<group>"; };
+		96CCB5EA15968F8000CEC1BD /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		96CCB5EB15968F8000CEC1BD /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		96CCB5EC15968F8000CEC1BD /* NSString+uploadHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+uploadHash.h"; sourceTree = "<group>"; };
+		96CCB5ED15968F8000CEC1BD /* NSString+uploadHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+uploadHash.m"; sourceTree = "<group>"; };
+		96CCB5F315968FEF00CEC1BD /* NSStringMods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringMods.h; sourceTree = "<group>"; };
+		96CCB5F41596907500CEC1BD /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		96E185A01595F9AA00CFB0BF /* Natarre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natarre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E185A41595F9AA00CFB0BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96E185A61595F9AA00CFB0BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -29,8 +49,8 @@
 		96E185B31595F9AA00CFB0BF /* TNBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNBAppDelegate.h; sourceTree = "<group>"; };
 		96E185B41595F9AA00CFB0BF /* TNBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNBAppDelegate.m; sourceTree = "<group>"; };
 		96E185B71595F9AA00CFB0BF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		96E185B91595F9AA00CFB0BF /* TNBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNBViewController.h; sourceTree = "<group>"; };
-		96E185BA1595F9AA00CFB0BF /* TNBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNBViewController.m; sourceTree = "<group>"; };
+		96E185B91595F9AA00CFB0BF /* TNBRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNBRootViewController.h; sourceTree = "<group>"; };
+		96E185BA1595F9AA00CFB0BF /* TNBRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNBRootViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +67,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96CCB5DA1596787900CEC1BD /* Model Objects */ = {
+			isa = PBXGroup;
+			children = (
+				96CCB5DB1596791C00CEC1BD /* TNBCurrentUser.h */,
+				96CCB5DC1596791D00CEC1BD /* TNBCurrentUser.m */,
+			);
+			name = "Model Objects";
+			sourceTree = "<group>";
+		};
+		96CCB5DE1596793100CEC1BD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				96CCB5D71596787100CEC1BD /* TNBLoginManager.h */,
+				96CCB5D81596787100CEC1BD /* TNBLoginManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		96CCB5E215967BCD00CEC1BD /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96E185B91595F9AA00CFB0BF /* TNBRootViewController.h */,
+				96E185BA1595F9AA00CFB0BF /* TNBRootViewController.m */,
+				96CCB5E315967BD900CEC1BD /* Login VC's */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		96CCB5E315967BD900CEC1BD /* Login VC's */ = {
+			isa = PBXGroup;
+			children = (
+				96CCB5DF15967BC700CEC1BD /* TNBLoginViewController.h */,
+				96CCB5E015967BC700CEC1BD /* TNBLoginViewController.m */,
+			);
+			name = "Login VC's";
+			sourceTree = "<group>";
+		};
+		96CCB5F115968F8600CEC1BD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				96CCB5E815968F7F00CEC1BD /* NSString+downloadHash.h */,
+				96CCB5E915968F8000CEC1BD /* NSString+downloadHash.m */,
+				96CCB5EA15968F8000CEC1BD /* NSString+MD5.h */,
+				96CCB5EB15968F8000CEC1BD /* NSString+MD5.m */,
+				96CCB5EC15968F8000CEC1BD /* NSString+uploadHash.h */,
+				96CCB5ED15968F8000CEC1BD /* NSString+uploadHash.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		96E185951595F9AA00CFB0BF = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +147,15 @@
 		96E185AA1595F9AA00CFB0BF /* Natarre */ = {
 			isa = PBXGroup;
 			children = (
+				96CCB5F41596907500CEC1BD /* Constants.h */,
+				96CCB5F315968FEF00CEC1BD /* NSStringMods.h */,
 				96E185B31595F9AA00CFB0BF /* TNBAppDelegate.h */,
 				96E185B41595F9AA00CFB0BF /* TNBAppDelegate.m */,
 				96E185B61595F9AA00CFB0BF /* MainStoryboard.storyboard */,
-				96E185B91595F9AA00CFB0BF /* TNBViewController.h */,
-				96E185BA1595F9AA00CFB0BF /* TNBViewController.m */,
+				96CCB5E215967BCD00CEC1BD /* View Controllers */,
+				96CCB5DE1596793100CEC1BD /* Managers */,
+				96CCB5DA1596787900CEC1BD /* Model Objects */,
+				96CCB5F115968F8600CEC1BD /* Categories */,
 				96E185AB1595F9AA00CFB0BF /* Supporting Files */,
 			);
 			path = Natarre;
@@ -126,7 +200,7 @@
 			attributes = {
 				CLASSPREFIX = TNB;
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = Strabo;
+				ORGANIZATIONNAME = "Nate Beatty";
 			};
 			buildConfigurationList = 96E1859A1595F9AA00CFB0BF /* Build configuration list for PBXProject "Natarre" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -164,7 +238,13 @@
 			files = (
 				96E185B11595F9AA00CFB0BF /* main.m in Sources */,
 				96E185B51595F9AA00CFB0BF /* TNBAppDelegate.m in Sources */,
-				96E185BB1595F9AA00CFB0BF /* TNBViewController.m in Sources */,
+				96E185BB1595F9AA00CFB0BF /* TNBRootViewController.m in Sources */,
+				96CCB5D91596787100CEC1BD /* TNBLoginManager.m in Sources */,
+				96CCB5DD1596791D00CEC1BD /* TNBCurrentUser.m in Sources */,
+				96CCB5E115967BC700CEC1BD /* TNBLoginViewController.m in Sources */,
+				96CCB5EE15968F8000CEC1BD /* NSString+downloadHash.m in Sources */,
+				96CCB5EF15968F8000CEC1BD /* NSString+MD5.m in Sources */,
+				96CCB5F015968F8000CEC1BD /* NSString+uploadHash.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +329,12 @@
 		96E185C01595F9AA00CFB0BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Thomas Beatty";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Natarre/Natarre-Prefix.pch";
 				INFOPLIST_FILE = "Natarre/Natarre-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "59CF7DD2-0276-4422-9E5B-5801A206285D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -276,6 +358,7 @@
 				96E185C01595F9AA00CFB0BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

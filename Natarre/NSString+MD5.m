@@ -3,7 +3,7 @@
 //  Ramble
 //
 //  Created by Thomas Beatty on 1/25/12.
-//  Copyright (c) 2012 Strabo LLC. All rights reserved.
+//  Copyright (c) 2012 Nate Beatty LLC. All rights reserved.
 //
 
 #import <CommonCrypto/CommonDigest.h>

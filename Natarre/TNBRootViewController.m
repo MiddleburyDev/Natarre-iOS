@@ -1,23 +1,30 @@
 //
 //  TNBViewController.m
-//  Natarre
+//  ;
 //
 //  Created by Thomas Beatty on 6/23/12.
-//  Copyright (c) 2012 Strabo. All rights reserved.
+//  Copyright (c) 2012 Nate Beatty. All rights reserved.
 //
 
-#import "TNBViewController.h"
+#import "TNBRootViewController.h"
 
-@interface TNBViewController ()
+@interface TNBRootViewController ()
 
 @end
 
-@implementation TNBViewController
+@implementation TNBRootViewController
+
+#pragma mark - View Lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"TNBRootViewController: Root View Controller loaded successfully.");
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [self verifyLogin];
 }
 
 - (void)viewDidUnload
@@ -29,6 +36,16 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+#pragma mark - Login Handling
+
+-(void)verifyLogin {
+    if (![[TNBLoginManager defaultManager] userIsLoggedIn]) {
+        NSLog(@"TNBRootViewController: Presenting login view controller.");
+        TNBLoginViewController * loginViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
+        [self presentViewController:loginViewController animated:NO completion:nil];
+    }
 }
 
 @end

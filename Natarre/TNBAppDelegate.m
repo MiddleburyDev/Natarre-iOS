@@ -3,7 +3,7 @@
 //  Natarre
 //
 //  Created by Thomas Beatty on 6/23/12.
-//  Copyright (c) 2012 Strabo. All rights reserved.
+//  Copyright (c) 2012 Nate Beatty. All rights reserved.
 //
 
 #import "TNBAppDelegate.h"
@@ -11,10 +11,12 @@
 @implementation TNBAppDelegate
 
 @synthesize window = _window;
+@synthesize loginManager;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.loginManager = [[TNBLoginManager alloc] init];
     return YES;
 }
 							
