@@ -122,7 +122,6 @@
     // Notify the delegate of an error if one exists
     if (!isValidJSON || error) {
         if ([self.delegate respondsToSelector:@selector(userAccountCreationDidFailWithError:)]) {
-            NSLog(@"LoginManager: Notifying delegate userAccountCreationDidFailWithError: %@.", error.localizedDescription);
             [delegate userAccountCreationDidFailWithError:error];
         }
         return;

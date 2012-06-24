@@ -17,6 +17,10 @@
 {
     // Override point for customization after application launch.
     self.loginManager = [[TNBLoginManager alloc] init];
+    
+    // TESTING ONLY
+    [self.loginManager logCurrentUserOut];
+    
     return YES;
 }
 							
