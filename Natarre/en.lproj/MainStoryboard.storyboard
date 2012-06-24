@@ -132,11 +132,11 @@
             </objects>
             <point key="canvasLocation" x="3927" y="0.0"/>
         </scene>
-        <!--Pull To Refresh Table View Controller - Root View Controller-->
+        <!--Reading List View Controller - Root View Controller-->
         <scene sceneID="hbS-UI-3Bi">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YhO-6Q-sRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="2KB-LI-K9r" customClass="TNBPullToRefreshTableViewController" sceneMemberID="viewController">
+                <tableViewController id="2KB-LI-K9r" customClass="TNBReadingListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="61" sectionHeaderHeight="22" sectionFooterHeight="22" id="VHC-Hm-WmW">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,11 +177,11 @@
             </objects>
             <point key="canvasLocation" x="2640" y="760"/>
         </scene>
-        <!--Pull To Refresh Table View Controller - Root View Controller-->
+        <!--Favs View Controller - Root View Controller-->
         <scene sceneID="hI2-7v-6aG">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lve-J9-Y94" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="zeE-Gw-ipv" customClass="TNBPullToRefreshTableViewController" sceneMemberID="viewController">
+                <tableViewController id="zeE-Gw-ipv" customClass="TNBFavsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="61" sectionHeaderHeight="22" sectionFooterHeight="22" id="fJD-3s-fcR">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,7 +282,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Text" id="PNi-ke-gZp">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -292,6 +292,38 @@
                                     <outletCollection property="gestureRecognizers" destination="gKg-8d-6Md" appends="YES" id="uRC-ee-DJm"/>
                                 </connections>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ybd-Bj-71p">
+                                <rect key="frame" x="262" y="0.0" width="31" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="rList.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="rListActive.png"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="readingListButtonWasPressed:" destination="6ht-8m-Xgn" eventType="touchUpInside" id="2v9-yC-dRW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nFt-jp-cgA">
+                                <rect key="frame" x="208" y="0.0" width="31" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="fav.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="favActive.png"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="favoriteButtonWasPressed:" destination="6ht-8m-Xgn" eventType="touchUpInside" id="39R-Md-eiz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -672,10 +704,14 @@
         <image name="allStoriesActive.png" width="128" height="102"/>
         <image name="arrow.png" width="75" height="166"/>
         <image name="backNav.png" width="94" height="74"/>
-        <image name="mainLogo.png" width="16" height="16"/>
+        <image name="fav.png" width="74" height="74"/>
+        <image name="favActive.png" width="74" height="74"/>
+        <image name="mainLogo.png" width="209" height="74"/>
         <image name="myFavorites@2x.png" width="128" height="102"/>
         <image name="myFavoritesActive.png" width="128" height="102"/>
         <image name="prefsNav.png" width="102" height="74"/>
+        <image name="rList.png" width="74" height="74"/>
+        <image name="rListActive.png" width="74" height="74"/>
         <image name="readingList@2x.png" width="128" height="102"/>
         <image name="readingListActive.png" width="128" height="102"/>
         <image name="submitNav.png" width="128" height="74"/>
@@ -694,6 +730,9 @@
             <relationships>
                 <relationship kind="action" name="swipe:"/>
             </relationships>
+        </class>
+        <class className="TNBFavsViewController" superclassName="TNBPullToRefreshTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBFavsViewController.h"/>
         </class>
         <class className="TNBHackaTabController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBHackaTabController.h"/>
@@ -740,9 +779,14 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBReaderViewController.h"/>
             <relationships>
                 <relationship kind="action" name="backButtonPressed:"/>
+                <relationship kind="action" name="favoriteButtonWasPressed:"/>
+                <relationship kind="action" name="readingListButtonWasPressed:"/>
                 <relationship kind="action" name="swipeRightDetected:"/>
                 <relationship kind="outlet" name="theTextView" candidateClass="UITextView"/>
             </relationships>
+        </class>
+        <class className="TNBReadingListViewController" superclassName="TNBPullToRefreshTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBReadingListViewController.h"/>
         </class>
         <class className="TNBRegisterViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBRegisterViewController.h"/>

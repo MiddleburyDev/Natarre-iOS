@@ -21,6 +21,8 @@
 #define kTNBThisWeekPromptURL kTNBBaseURL @"/mobile/api/prompts/thisweek"
 #define kTNBStoriesForPromptURL kTNBBaseURL @"/mobile/api/stories/forprompt"
 #define kTNBPopularStoriesURL kTNBBaseURL @"/mobile/api/stories/popular"
+#define kTNBFavoriteStoriesURL kTNBBaseURL @"/mobile/api/stories/favorites"
+#define kTNBReadingListURL kTNBBaseURL @"/mobile/api/stories/readinglist"
 
 #define kTNBAllPromptsURL kTNBBaseURL @"/mobile/api/prompts/all"
 
@@ -28,5 +30,6 @@
 #define kTNBNSUserDefaultsTokenKey @"kTNBNSUserDefaultsTokenKey"
 #define kTNBNSUserDefaultsEmailKey @"kTNBNSUserDefaultsEmailKey"
 #define kTNBNSUserDefaultsUserIDKey @"kTNBNSUserDefaultsUserIDKey"
+
 
 #endif

@@ -1,27 +1,20 @@
 //
-//  TNBAllStoriesViewController.m
+//  TNBFavsViewController.m
 //  Natarre
 //
 //  Created by Thomas Beatty on 6/24/12.
 //  Copyright (c) 2012 Nate Beatty. All rights reserved.
 //
 
-#import "TNBAllStoriesViewController.h"
+#import "TNBFavsViewController.h"
 
-@interface TNBAllStoriesViewController (TNBStoriesManagerDelegate) <TNBStoriesManagerDelegate>
-
-
--(void)successfullyDownloadedStories:(NSArray *)stories;
+@interface TNBFavsViewController (TNBStoriesManagerDelegate) <TNBStoriesManagerDelegate>
 
 @end
 
-@interface TNBAllStoriesViewController (InternalMethods)
--(TNBStoryCell *)configureCell:(TNBStoryCell *)cell;
-@end
+@implementation TNBFavsViewController
 
-@implementation TNBAllStoriesViewController
-
-@synthesize storyList, promptID;
+@synthesize storyList;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,17 +29,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self refresh];
-}
-
--(void)viewDidAppear:(BOOL)animated {
-    [self refresh];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [self refresh];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -61,11 +53,11 @@
     
     TNBCurrentUser * user = [[TNBLoginManager defaultManager] currentUser];
     
-    NSArray * objects = [NSArray arrayWithObjects:user.email, user.token, self.promptID, nil];
-    NSArray * keys = [NSArray arrayWithObjects:@"email", @"token", @"prompt_ID", nil];
+    NSArray * objects = [NSArray arrayWithObjects:user.email, user.token, nil];
+    NSArray * keys = [NSArray arrayWithObjects:@"email", @"token", nil];
     
     NSDictionary * keypairs = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
-    [storiesManager generateRequestWithKeyPairs:keypairs sendToURL:[NSURL URLWithString:kTNBStoriesForPromptURL]];
+    [storiesManager generateRequestWithKeyPairs:keypairs sendToURL:[NSURL URLWithString:kTNBFavoriteStoriesURL]];
     [storiesManager sendGeneratedRequest];
     
     // ** !!! ** KEEP DO NOT DELETE ** !!! ** //
@@ -142,14 +134,9 @@
     return cell;
 }
 
--(IBAction)swipe:(id)sender {
-    [(TNBHackaTabController *)self.navigationController.parentViewController shouldDisplayPrefsButton];
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 @end
 
-@implementation TNBAllStoriesViewController (TNBStoriesManagerDelegate)
+@implementation TNBFavsViewController (TNBStoriesManagerDelegate)
 
 -(void)successfullyDownloadedStories:(NSArray *)stories {
     NSLog(@"Reloading Data: %@", stories);

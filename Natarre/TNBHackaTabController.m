@@ -170,6 +170,9 @@
 }
 
 -(IBAction)backButtonWasPressed:(id)sender {
+    if (currentNavController.childViewControllers.count <= 2) {
+        [self shouldDisplayPrefsButton];
+    }
     [currentNavController popViewControllerAnimated:YES];
 }
 @end

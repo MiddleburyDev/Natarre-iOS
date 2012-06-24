@@ -69,4 +69,22 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(IBAction)favoriteButtonWasPressed:(id)sender {
+    // Toggle the button state
+    if (((UIButton *)sender).selected == YES) {
+        ((UIButton *)sender).selected = NO;
+    } else {
+    ((UIButton *)sender).selected = YES;
+    }
+}
+
+-(IBAction)readingListButtonWasPressed:(id)sender {
+    // Toggle the button state
+    if (((UIButton *)sender).selected == YES) {
+        ((UIButton *)sender).selected = NO;
+    } else {
+        ((UIButton *)sender).selected = YES;
+    }
+}
+
 @end

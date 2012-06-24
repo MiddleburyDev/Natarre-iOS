@@ -28,4 +28,7 @@
 -(IBAction)backButtonPressed:(id)sender;
 -(IBAction)swipeRightDetected:(id)sender;
 
+-(IBAction)favoriteButtonWasPressed:(id)sender;
+-(IBAction)readingListButtonWasPressed:(id)sender;
+
 @end
