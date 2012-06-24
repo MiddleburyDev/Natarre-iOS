@@ -24,6 +24,8 @@
 #define kTNBFavoriteStoriesURL kTNBBaseURL @"/mobile/api/stories/favorites"
 #define kTNBReadingListURL kTNBBaseURL @"/mobile/api/stories/readinglist"
 
+#define kTNBFavsURL kTNBBaseURL @"/mobile/api/add/vote"
+
 #define kTNBAllPromptsURL kTNBBaseURL @"/mobile/api/prompts/all"
 
 // NSUserDefaults Login Keys

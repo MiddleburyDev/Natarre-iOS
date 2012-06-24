@@ -37,6 +37,12 @@
     // Release any retained subviews of the main view.
 }
 
+-(void)viewWillUnload {
+    //TNBStoriesManager * storyManager = [[TNBStoriesManager alloc] init];
+    
+    //[storyManager sendFavoriteRequestForStory:self.story.storyID];
+}
+
 -(void)viewWillAppear:(BOOL)animated {
     self.theTextView.text = self.story.content;
     

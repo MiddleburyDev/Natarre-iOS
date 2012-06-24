@@ -156,6 +156,31 @@
     
 }
 
+-(void)sendFavoriteRequestForStory:(NSInteger)storyID {
+    TNBCurrentUser * user = [[TNBLoginManager defaultManager] currentUser];
+    
+    NSDictionary * args = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:user.email, user.token, storyID, nil] forKeys:[NSArray arrayWithObjects:@"email", @"token", @"story_ID", nil]];
+    
+    // Set the params for the request
+    NSMutableString * params = [NSMutableString stringWithCapacity:200];
+    NSString * key;
+    for (key in args) {
+        NSLog(@"TNBStoriesManager: Appending value: %@ for key: %@ to the params.", [args objectForKey:key], key);
+        [params appendString:[NSString stringWithFormat:@"%@=%@&", key, [args objectForKey:key]]];
+    }
+    
+    // Generate the request
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:kTNBFavsURL]];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    // Keep track of any errors
+
+    
+    // Send the request
+    [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+}
+
 @end
 
 @implementation TNBStoriesManager (InternalMethods)

@@ -40,4 +40,6 @@
 
 -(void)sendGeneratedRequest;
 
+-(void)sendFavoriteRequestForStory:(NSInteger)storyID;
+
 @end

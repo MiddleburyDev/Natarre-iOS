@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "TNBAppDelegate.h"
 
+#import "TNBStoriesManager.h"
+
 #import "TNBStory.h"
 
 
