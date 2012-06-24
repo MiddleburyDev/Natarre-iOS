@@ -20,13 +20,13 @@
             </objects>
             <point key="canvasLocation" x="184" y="141"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Pull To Refresh Table View Controller - Root View Controller-->
         <scene sceneID="Scb-N5-U90">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gEM-1T-Kvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="04Q-ht-lRg" sceneMemberID="viewController">
+                <tableViewController id="04Q-ht-lRg" customClass="TNBPullToRefreshTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="F5w-kc-wnw">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -46,13 +46,13 @@
             </objects>
             <point key="canvasLocation" x="2164" y="-913"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Pull To Refresh Table View Controller - Root View Controller-->
         <scene sceneID="5nb-zw-TNc">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WyH-rL-Qp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="5Ve-56-suG" sceneMemberID="viewController">
+                <tableViewController id="5Ve-56-suG" customClass="TNBPullToRefreshTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JPU-sF-Swl">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -72,13 +72,13 @@
             </objects>
             <point key="canvasLocation" x="3132" y="-592"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Pull To Refresh Table View Controller - Root View Controller-->
         <scene sceneID="gqo-aD-Hl6">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRy-KX-6oD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="Ofg-Sv-JE1" sceneMemberID="viewController">
+                <tableViewController id="Ofg-Sv-JE1" customClass="TNBPullToRefreshTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hfI-DU-ndZ">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -98,13 +98,13 @@
             </objects>
             <point key="canvasLocation" x="3320" y="48"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Pull To Refresh Table View Controller - Root View Controller-->
         <scene sceneID="hbS-UI-3Bi">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YhO-6Q-sRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="2KB-LI-K9r" sceneMemberID="viewController">
+                <tableViewController id="2KB-LI-K9r" customClass="TNBPullToRefreshTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VHC-Hm-WmW">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -128,9 +128,12 @@
         <scene sceneID="UU4-ro-nX3">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7S-4M-7g0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="szb-la-cJJ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="readingListNavController" definesPresentationContext="YES" id="szb-la-cJJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="JPh-35-owK"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="9VE-yU-ete">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="9VE-yU-ete">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -146,7 +149,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lve-J9-Y94" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="zeE-Gw-ipv" customClass="TNBPullToRefreshTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fJD-3s-fcR">
-                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -170,9 +173,12 @@
         <scene sceneID="axB-az-3L4">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCd-qd-rxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="iQR-Qs-Eng" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="myFavoritesNavController" definesPresentationContext="YES" id="iQR-Qs-Eng" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="NNg-Nb-opW"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="JnV-SI-xKf">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="JnV-SI-xKf">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -182,13 +188,134 @@
             </objects>
             <point key="canvasLocation" x="1924" y="1424"/>
         </scene>
+        <!--Hacka Tab Controller-->
+        <scene sceneID="4gd-wa-ub2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lCU-Zd-32i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="mainNavigationController" id="yfE-dX-8s9" customClass="TNBHackaTabController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OXD-6Z-Bfb">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="hHK-wL-enB">
+                                <rect key="frame" x="0.0" y="44" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="KFv-o2-qW7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="vdc-4J-nUd">
+                                <rect key="frame" x="0.0" y="411" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7R8-9D-cqq">
+                                <rect key="frame" x="0.0" y="416" width="64" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="thisWeek@2x.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="thisWeekActive.png"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="thisWeekButtonWasPressed:" destination="yfE-dX-8s9" eventType="touchUpInside" id="PKB-2C-KUm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ak5-TZ-MlJ">
+                                <rect key="frame" x="128" y="416" width="64" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="allStories@2x.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="allStoriesActive.png"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="allStoriesButtonWasPressed:" destination="yfE-dX-8s9" eventType="touchUpInside" id="4yx-GA-mNh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h1L-JI-Hqg">
+                                <rect key="frame" x="64" y="416" width="64" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="topStories@2x.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="topStoriesActive.png"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="topStoriesButtonWasPressed:" destination="yfE-dX-8s9" eventType="touchUpInside" id="sf3-ug-bPk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Qh1-bG-mnx">
+                                <rect key="frame" x="256" y="416" width="64" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="myFavorites@2x.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="myFavoritesActive.png"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="myFavoritesButtonWasPressed:" destination="yfE-dX-8s9" eventType="touchUpInside" id="hvF-bS-wl0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LDL-i8-avV">
+                                <rect key="frame" x="192" y="416" width="64" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="readingList@2x.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="readingListActive.png"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="readingListButtonWasPressed:" destination="yfE-dX-8s9" eventType="touchUpInside" id="3GL-ln-dy2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="allStoriesButton" destination="ak5-TZ-MlJ" id="kve-rr-a5r"/>
+                        <outlet property="myFavoritesButton" destination="Qh1-bG-mnx" id="1cF-hj-rbs"/>
+                        <outlet property="navBarBackground" destination="KFv-o2-qW7" id="alh-Zw-qme"/>
+                        <outlet property="readingListButton" destination="LDL-i8-avV" id="Uze-s2-HCZ"/>
+                        <outlet property="subView" destination="hHK-wL-enB" id="WvU-Hm-hM5"/>
+                        <outlet property="tabBarBackground" destination="vdc-4J-nUd" id="M5j-tJ-ALN"/>
+                        <outlet property="thisWeekButton" destination="7R8-9D-cqq" id="knl-po-Lh0"/>
+                        <outlet property="topStoriesButton" destination="h1L-JI-Hqg" id="8HK-q4-lEM"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1856" y="53"/>
+        </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="Rzm-xy-Mng">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="peF-18-Hdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="YKf-vp-NkH" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="allStoriesNavController" definesPresentationContext="YES" id="YKf-vp-NkH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="cNA-7f-sDx"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="QLS-kK-DTu">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="QLS-kK-DTu">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -202,9 +329,12 @@
         <scene sceneID="gJw-ge-kbD">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2o-UP-eXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="JVz-x2-Uj6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="topStoriesNavController" definesPresentationContext="YES" id="JVz-x2-Uj6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="V6A-xH-i9y"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="aL3-T1-k86">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="aL3-T1-k86">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -218,9 +348,12 @@
         <scene sceneID="Vps-uU-dNE">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xQ-Uu-9pg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="Nbr-cf-w0P" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="thisWeekNavController" definesPresentationContext="YES" id="Nbr-cf-w0P" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="thisWeek.png" id="1dg-k7-zML"/>
-                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="AAF-Eb-eJL">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" barStyle="blackOpaque" id="AAF-Eb-eJL">
+                        <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -229,31 +362,6 @@
                 </navigationController>
             </objects>
             <point key="canvasLocation" x="1632" y="-912"/>
-        </scene>
-        <!--Tab Controller-->
-        <scene sceneID="rRv-hK-ZXw">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0tM-fV-uU4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController storyboardIdentifier="mainNavigationController" definesPresentationContext="YES" id="Bgt-Ga-Uis" userLabel="Tab Controller" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="hAi-T9-HOs"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="Ioa-3j-6H1">
-                        <rect key="frame" x="129" y="330" width="163" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Nbr-cf-w0P" kind="relationship" relationship="viewControllers" id="dOE-3h-tps"/>
-                        <segue destination="JVz-x2-Uj6" kind="relationship" relationship="viewControllers" id="pJ7-B2-fiT"/>
-                        <segue destination="YKf-vp-NkH" kind="relationship" relationship="viewControllers" id="2kM-CP-xFI"/>
-                        <segue destination="szb-la-cJJ" kind="relationship" relationship="viewControllers" id="DHv-j8-wcg"/>
-                        <segue destination="iQR-Qs-Eng" kind="relationship" relationship="viewControllers" id="yl6-bx-Ayh"/>
-                    </connections>
-                </tabBarController>
-            </objects>
-            <point key="canvasLocation" x="1854" y="69"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WSn-jM-kC6">
@@ -390,9 +498,37 @@
         </scene>
     </scenes>
     <resources>
-        <image name="thisWeek.png" width="64" height="57"/>
+        <image name="allStories@2x.png" width="128" height="114"/>
+        <image name="allStoriesActive.png" width="128" height="102"/>
+        <image name="myFavorites@2x.png" width="128" height="114"/>
+        <image name="myFavoritesActive.png" width="128" height="102"/>
+        <image name="readingList@2x.png" width="128" height="114"/>
+        <image name="readingListActive.png" width="128" height="102"/>
+        <image name="thisWeek.png" width="16" height="16"/>
+        <image name="thisWeek@2x.png" width="128" height="114"/>
+        <image name="thisWeekActive.png" width="128" height="102"/>
+        <image name="topStories@2x.png" width="128" height="114"/>
+        <image name="topStoriesActive.png" width="128" height="102"/>
     </resources>
     <classes>
+        <class className="TNBHackaTabController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBHackaTabController.h"/>
+            <relationships>
+                <relationship kind="action" name="allStoriesButtonWasPressed:"/>
+                <relationship kind="action" name="myFavoritesButtonWasPressed:"/>
+                <relationship kind="action" name="readingListButtonWasPressed:"/>
+                <relationship kind="action" name="thisWeekButtonWasPressed:"/>
+                <relationship kind="action" name="topStoriesButtonWasPressed:"/>
+                <relationship kind="outlet" name="allStoriesButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myFavoritesButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="navBarBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="readingListButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="subView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="tabBarBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="thisWeekButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="topStoriesButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
         <class className="TNBLoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBLoginViewController.h"/>
             <relationships>

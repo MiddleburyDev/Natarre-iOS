@@ -10,6 +10,7 @@
 #import "TNBAppDelegate.h"
 
 #import "TNBLoginViewController.h"
+#import "TNBHackaTabController.h"
 
 @interface TNBRootViewController : UIViewController {
     

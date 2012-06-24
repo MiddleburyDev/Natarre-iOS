@@ -23,8 +23,7 @@
     NSLog(@"TNBRootViewController: Root View Controller loaded successfully.");
     
     // Load the child view controllers
-    UITabBarController * albumNavigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainNavigationController"];
-    albumNavigationController.tabBar.backgroundImage = [UIImage imageNamed:@"tab_bar"];
+    TNBHackaTabController * albumNavigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainNavigationController"];
     
     // Set up the child view controller
     CGRect newFrame = self.view.frame;
