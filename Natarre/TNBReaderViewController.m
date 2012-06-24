@@ -14,7 +14,7 @@
 
 @implementation TNBReaderViewController
 
-@synthesize story;
+@synthesize story, theTextView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,6 +37,10 @@
     // Release any retained subviews of the main view.
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    self.theTextView.text = self.story.content;
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -44,8 +48,8 @@
 
 #pragma mark - Other Shtuff
 
--(void)loadStory:(TNBStory *)theStory {
-    self.story = story;
+-(void)loadStory {
+    
 }
 
 #pragma mark - Button Handling

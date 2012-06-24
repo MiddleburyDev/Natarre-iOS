@@ -13,15 +13,17 @@
 
 
 @interface TNBReaderViewController : UIViewController {
-    IBOutlet UITextView * textView;
+    
+    IBOutlet UITextView * theTextView;
     
     TNBStory * story;
     
 }
 
+@property(nonatomic, strong)IBOutlet UITextView * theTextView;
 @property(nonatomic, strong)TNBStory * story;
 
--(void)loadStory:(TNBStory *)theStory;
+-(void)loadStory;
 
 -(IBAction)backButtonPressed:(id)sender;
 -(IBAction)swipeRightDetected:(id)sender;

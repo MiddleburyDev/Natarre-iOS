@@ -20,6 +20,8 @@
 
 @implementation TNBThisWeekViewController
 
+@synthesize storyList;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -88,9 +90,9 @@
     
     NSLog(@"Configuring Cell!");
 
-    TNBStory * story = [storyList objectAtIndex:index];
+    TNBStory * story = [self.storyList objectAtIndex:index];
     
-    cell.titleLabel.text = story.text;
+    cell.titleLabel.text = story.title;
     cell.authorLabel.text = story.authorName;
     
     if (story.audioURL != nil) {
@@ -129,7 +131,12 @@
      */
     
     TNBReaderViewController * readerVC = (TNBReaderViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"readerViewController"];
-    [readerVC loadStory:[storyList objectAtIndex:[indexPath indexAtPosition:1]]];
+    
+    NSLog(@"Fucking Content: %@", [[self.storyList objectAtIndex:[indexPath indexAtPosition:1]] content]);
+    
+    readerVC.story = [self.storyList objectAtIndex:[indexPath indexAtPosition:1]];
+    
+    [readerVC loadStory];
     [self.navigationController pushViewController:readerVC animated:YES];
 }
 
@@ -139,7 +146,7 @@
 
 -(void)successfullyDownloadedStories:(NSArray *)stories {
     NSLog(@"Reloading Data: %@", stories);
-    storyList = stories;
+    self.storyList = stories;
     [self.tableView reloadData];
 }
 

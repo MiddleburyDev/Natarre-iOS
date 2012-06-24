@@ -14,7 +14,7 @@
     NSString * authorName;
     NSDate * dateCreated;
     NSString * title;
-    NSString * text;
+    NSString * content;
     NSString * audioURL;
 }
 
@@ -23,7 +23,7 @@
 @property(nonatomic, strong)NSString * authorName;
 @property(nonatomic, strong)NSDate * dateCreated;
 @property(nonatomic, strong)NSString * title;
-@property(nonatomic, strong)NSString * text;
+@property(nonatomic, strong)NSString * content;
 @property(nonatomic, strong)NSString * audioURL;
 
 @end

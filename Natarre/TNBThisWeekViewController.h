@@ -19,6 +19,8 @@
     NSArray * storyList;
 }
 
+@property(nonatomic, strong)NSArray * storyList;
+
 -(void)refresh;
 
 -(TNBStoryCell *)configureCell:(TNBStoryCell *)cell withArrayIndex:(NSInteger)index;

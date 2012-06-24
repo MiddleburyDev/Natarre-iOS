@@ -57,6 +57,8 @@
     
     NSLog(@"Response: %@", [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding]);
     
+    if (!responseData) return 0;
+    
     NSError * theError;
     NSDictionary * responseDictionary = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingAllowFragments error:&theError];
     
@@ -64,7 +66,7 @@
     if (error) {
         NSLog(@"TNBStoriesManager: !!!Error occurred while sending the post request: %@.", error);
         
-        return nil;
+        return 0;
     }
     return (NSInteger)[responseDictionary objectForKey:@"id"];
 }
@@ -127,7 +129,7 @@
         story.authorName = [dic objectForKey:@"author_name"];
         story.title = [dic objectForKey:@"title"];
         story.dateCreated = [NSDate dateWithTimeIntervalSince1970:(int)[dic objectForKey:@"date_created"]];
-        story.text = [dic objectForKey:@"content"];
+        story.content = [dic objectForKey:@"content"];
         story.audioURL = ([dic objectForKey:@"audio_file_url"]) ? nil : [dic objectForKey:@"audio_file_url"];
         [objects addObject:story];
     }
