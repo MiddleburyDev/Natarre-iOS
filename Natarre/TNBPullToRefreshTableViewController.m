@@ -8,7 +8,8 @@
 
 #import "TNBPullToRefreshTableViewController.h"
 
-#define REFRESH_HEADER_HEIGHT 52.0f
+#define REFRESH_HEADER_HEIGHT 52.0
+#define degreesToRadians(x) (M_PI * x / 180.0)
 
 @interface TNBPullToRefreshTableViewController (InternalMethods)
     -(void)setupStrings;
@@ -100,12 +101,12 @@
             if (scrollView.contentOffset.y < -REFRESH_HEADER_HEIGHT) {
                 // User is scrolling above the header
                 self.headerLabel.text = self.releaseText;
-                CGAffineTransform rotate = CGAffineTransformMakeRotation( 1.0 / 180.0 * 3.14 );
+                CGAffineTransform rotate = CGAffineTransformMakeRotation(degreesToRadians(180));
                 [self.arrow setTransform:rotate];
             } else { 
                 // User is scrolling somewhere within the header
                 self.headerLabel.text = self.pullText;
-                CGAffineTransform rotate = CGAffineTransformMakeRotation( 1.0 / 180.0 * 3.14 );
+                CGAffineTransform rotate = CGAffineTransformMakeRotation(degreesToRadians(0));
                 [self.arrow setTransform:rotate];
             }
         }];

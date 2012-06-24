@@ -52,7 +52,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WyH-rL-Qp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="5Ve-56-suG" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JPU-sF-Swl">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -78,7 +78,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRy-KX-6oD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Ofg-Sv-JE1" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hfI-DU-ndZ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -104,7 +104,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YhO-6Q-sRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="2KB-LI-K9r" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VHC-Hm-WmW">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -128,7 +128,7 @@
         <scene sceneID="UU4-ro-nX3">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i7S-4M-7g0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" id="szb-la-cJJ" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="szb-la-cJJ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="JPh-35-owK"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="9VE-yU-ete">
                         <autoresizingMask key="autoresizingMask"/>
@@ -146,7 +146,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lve-J9-Y94" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="zeE-Gw-ipv" customClass="TNBPullToRefreshTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fJD-3s-fcR">
-                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -170,7 +170,7 @@
         <scene sceneID="axB-az-3L4">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pCd-qd-rxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" id="iQR-Qs-Eng" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="iQR-Qs-Eng" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="NNg-Nb-opW"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="JnV-SI-xKf">
                         <autoresizingMask key="autoresizingMask"/>
@@ -186,7 +186,7 @@
         <scene sceneID="Rzm-xy-Mng">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="peF-18-Hdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" id="YKf-vp-NkH" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="YKf-vp-NkH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="cNA-7f-sDx"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="QLS-kK-DTu">
                         <autoresizingMask key="autoresizingMask"/>
@@ -202,7 +202,7 @@
         <scene sceneID="gJw-ge-kbD">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o2o-UP-eXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController definesPresentationContext="YES" id="JVz-x2-Uj6" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="JVz-x2-Uj6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="V6A-xH-i9y"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="aL3-T1-k86">
                         <autoresizingMask key="autoresizingMask"/>
@@ -214,12 +214,12 @@
             </objects>
             <point key="canvasLocation" x="2600" y="-592"/>
         </scene>
-        <!--Navigation Controller - Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Vps-uU-dNE">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xQ-Uu-9pg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="Nbr-cf-w0P" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="1dg-k7-zML"/>
+                    <tabBarItem key="tabBarItem" title="" image="thisWeek.png" id="1dg-k7-zML"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="AAF-Eb-eJL">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -241,6 +241,8 @@
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="Nbr-cf-w0P" kind="relationship" relationship="viewControllers" id="dOE-3h-tps"/>
@@ -387,6 +389,9 @@
             <point key="canvasLocation" x="1348" y="896"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="thisWeek.png" width="64" height="57"/>
+    </resources>
     <classes>
         <class className="TNBLoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TNBLoginViewController.h"/>
