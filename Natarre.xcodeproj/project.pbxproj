@@ -14,6 +14,7 @@
 		96CCB5EF15968F8000CEC1BD /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5EB15968F8000CEC1BD /* NSString+MD5.m */; };
 		96CCB5F015968F8000CEC1BD /* NSString+uploadHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5ED15968F8000CEC1BD /* NSString+uploadHash.m */; };
 		96CCB5F71596AF4200CEC1BD /* TNBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CCB5F61596AF4200CEC1BD /* TNBRegisterViewController.m */; };
+		96CCB5F91596C5DC00CEC1BD /* tab_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96CCB5F81596C5DC00CEC1BD /* tab_bar@2x.png */; };
 		96E185A51595F9AA00CFB0BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A41595F9AA00CFB0BF /* UIKit.framework */; };
 		96E185A71595F9AA00CFB0BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A61595F9AA00CFB0BF /* Foundation.framework */; };
 		96E185A91595F9AA00CFB0BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E185A81595F9AA00CFB0BF /* CoreGraphics.framework */; };
@@ -41,6 +42,7 @@
 		96CCB5F41596907500CEC1BD /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		96CCB5F51596AF4200CEC1BD /* TNBRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNBRegisterViewController.h; sourceTree = "<group>"; };
 		96CCB5F61596AF4200CEC1BD /* TNBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNBRegisterViewController.m; sourceTree = "<group>"; };
+		96CCB5F81596C5DC00CEC1BD /* tab_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_bar@2x.png"; sourceTree = "<group>"; };
 		96E185A01595F9AA00CFB0BF /* Natarre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natarre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E185A41595F9AA00CFB0BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96E185A61595F9AA00CFB0BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,6 +124,14 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		96CCB5FA1596C5E200CEC1BD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				96CCB5F81596C5DC00CEC1BD /* tab_bar@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		96E185951595F9AA00CFB0BF = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +179,7 @@
 		96E185AB1595F9AA00CFB0BF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				96CCB5FA1596C5E200CEC1BD /* Images */,
 				96E185AC1595F9AA00CFB0BF /* Natarre-Info.plist */,
 				96E185AD1595F9AA00CFB0BF /* InfoPlist.strings */,
 				96E185B01595F9AA00CFB0BF /* main.m */,
@@ -231,6 +242,7 @@
 			files = (
 				96E185AF1595F9AA00CFB0BF /* InfoPlist.strings in Resources */,
 				96E185B81595F9AA00CFB0BF /* MainStoryboard.storyboard in Resources */,
+				96CCB5F91596C5DC00CEC1BD /* tab_bar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

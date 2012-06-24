@@ -21,6 +21,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     NSLog(@"TNBRootViewController: Root View Controller loaded successfully.");
+    
+    // Load the child view controllers
+    UITabBarController * albumNavigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"mainNavigationController"];
+    albumNavigationController.tabBar.backgroundImage = [UIImage imageNamed:@"tab_bar"];
+    
+    // Set up the child view controller
+    CGRect newFrame = self.view.frame;
+    newFrame.origin.y = 0;
+    albumNavigationController.view.frame = newFrame;
+    [self addChildViewController:albumNavigationController];
+    [self.view addSubview:albumNavigationController.view];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -44,6 +55,7 @@
     if (![[TNBLoginManager defaultManager] userIsLoggedIn]) {
         NSLog(@"TNBRootViewController: Presenting login view controller.");
         UINavigationController * loginNavController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginNavController"];
+        loginNavController.navigationBar.hidden = YES;
         [self presentViewController:loginNavController animated:NO completion:nil];
     }
 }
